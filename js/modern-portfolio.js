@@ -7,6 +7,77 @@
 document.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
+  // --- Toast Notification Utility ---
+  const copyToast = document.getElementById('copy-toast');
+  let toastTimer = null;
+
+  function showToast(message) {
+    if (!copyToast) return;
+    copyToast.textContent = message;
+    copyToast.classList.add('show');
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () {
+      copyToast.classList.remove('show');
+    }, 2800);
+  }
+
+  // --- 0. Persistent Dark / Light Theme Controller ---
+  const themeToggleBtn = document.getElementById('themeToggleBtn');
+  const themeMobileLabel = document.getElementById('themeToggleMobileLabel');
+
+  function updateThemeUI(theme) {
+    if (!themeToggleBtn) return;
+    const isLight = theme === 'light';
+    themeToggleBtn.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+    themeToggleBtn.setAttribute('title', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+    if (themeMobileLabel) {
+      themeMobileLabel.textContent = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+    }
+  }
+
+  function applyTheme(theme, persist) {
+    document.documentElement.setAttribute('data-theme', theme);
+    if (persist) {
+      try {
+        localStorage.setItem('pushpender_theme', theme);
+      } catch (err) {
+        console.warn('Unable to persist theme preference in localStorage:', err);
+      }
+    }
+    updateThemeUI(theme);
+  }
+
+  // Initialize theme state
+  const initialTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+  updateThemeUI(initialTheme);
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', function () {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      const targetTheme = currentTheme === 'light' ? 'dark' : 'light';
+      applyTheme(targetTheme, true);
+      showToast(targetTheme === 'light' ? '☀️ Light theme activated' : '🌙 Dark theme activated');
+    });
+  }
+
+  // Listen for OS system theme preference changes if user hasn't set an explicit preference
+  if (window.matchMedia) {
+    const colorSchemeMedia = window.matchMedia('(prefers-color-scheme: light)');
+    const onSchemeChange = function (e) {
+      try {
+        const saved = localStorage.getItem('pushpender_theme');
+        if (!saved) {
+          applyTheme(e.matches ? 'light' : 'dark', false);
+        }
+      } catch (e) {}
+    };
+    if (colorSchemeMedia.addEventListener) {
+      colorSchemeMedia.addEventListener('change', onSchemeChange);
+    } else if (colorSchemeMedia.addListener) {
+      colorSchemeMedia.addListener(onSchemeChange);
+    }
+  }
+
   // --- 1. Hero Typewriter Animation ---
   const typewriterEl = document.getElementById('modern-typewriter');
   if (typewriterEl) {
@@ -68,9 +139,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
       projectCards.forEach(function (card) {
         const category = card.getAttribute('data-category');
+        const innerProjectCard = card.querySelector('.project-card');
         if (filterValue === 'all' || category.includes(filterValue)) {
           card.style.display = 'block';
-          card.classList.add('fade-in');
+          if (innerProjectCard) {
+            innerProjectCard.classList.remove('is-revealed');
+            // Re-trigger reveal animation smoothly on filter change
+            requestAnimationFrame(function () {
+              innerProjectCard.classList.add('is-revealed');
+            });
+          }
         } else {
           card.style.display = 'none';
         }
@@ -217,17 +295,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // --- 4. Clipboard Utility (Copy Email & Phone) ---
-  const copyToast = document.getElementById('copy-toast');
-
-  function showToast(message) {
-    if (!copyToast) return;
-    copyToast.textContent = message;
-    copyToast.classList.add('show');
-    setTimeout(function () {
-      copyToast.classList.remove('show');
-    }, 2800);
-  }
-
   const copyButtons = document.querySelectorAll('[data-copy-target]');
   copyButtons.forEach(function (btn) {
     btn.addEventListener('click', function (e) {
@@ -352,4 +419,50 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+  // --- 8. Intersection Observer for Section Headers & Project Cards ---
+  // Ensure elements fade and slide into view gracefully as user scrolls
+  const sectionHeaders = document.querySelectorAll('.section-header');
+  const projectRevealCards = document.querySelectorAll('.project-card.project-reveal');
+
+  // Add baseline reveal class to section headers
+  sectionHeaders.forEach(function (header) {
+    header.classList.add('reveal-on-scroll');
+  });
+
+  if ('IntersectionObserver' in window) {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px 0px -60px 0px', // Trigger slightly before element reaches bottom of viewport
+      threshold: 0.12
+    };
+
+    const scrollRevealObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target); // Once revealed, maintain state
+        }
+      });
+    }, observerOptions);
+
+    // Observe section headers
+    sectionHeaders.forEach(function (header) {
+      scrollRevealObserver.observe(header);
+    });
+
+    // Observe project cards with staggered reveal
+    projectRevealCards.forEach(function (card) {
+      scrollRevealObserver.observe(card);
+    });
+  } else {
+    // Graceful fallback for older environments without IntersectionObserver
+    sectionHeaders.forEach(function (header) {
+      header.classList.add('is-revealed');
+    });
+    projectRevealCards.forEach(function (card) {
+      card.classList.add('is-revealed');
+    });
+  }
 });
+
