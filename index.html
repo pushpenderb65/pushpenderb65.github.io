@@ -1,643 +1,952 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Pushpender Portfolio</title>
+    <title>Pushpender | Data Scientist & Analyst Portfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <meta name="description" content="Portfolio website of Pushpender - Aspiring Data Scientist & Data Analyst proficient in Python, SQL, Power BI, and Machine Learning.">
+    <meta property="og:title" content="Pushpender | Data Scientist & Analyst Portfolio">
+    <meta property="og:description" content="Portfolio website of Pushpender - Aspiring Data Scientist & Data Analyst proficient in Python, SQL, Power BI, and Machine Learning.">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/aos.css">
-
+    <!-- CSS Assets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-
-
-
-<style>
-
-/*======================================
-//--//-->   ABOUT
-======================================*/
-
-.about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-.about-mf .about-img {
-  margin-bottom: 2rem;
-}
-
-.about-mf .about-img img {
-  margin-left: 10px;
-}
-
-
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
-}
-
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
-}
-
-
-/* Animation styles */
-#typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
-}
-
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
-}
-
-
-/* project image zoom effect */
-
-.zoom-effect {
-  overflow: hidden;
-  transition: transform 0.3s ease-out;
-}
-
-.zoom-effect:hover {
-  transform: scale(1.1);
-}
-
-
-</style>
-
-
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/modern.css">
   </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Pushpender</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+  <body>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Pushpender</span></h1>
-
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
-
-						<script>
-
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
-
-						// Create an array of typing text
-						const typingTexts = [
-						'Aspiring Data Scientist  ',
-						'Aspiring Data Analyst   ',
-						'MCA Student   ',
-						];
-
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
-
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
-
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
-
-						<br>
-						<br>
-			            <h2> Aspiring Data Scientist & Data Analyst</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
-			            <!-- <p><a href="https://www.youtube.com/@RishabhMishraOfficial" class="btn btn-primary py-3 px-4">YouTube</a>  -->
-							<a href="https://github.com/pushpenderb65" class="btn btn-primary py-3 px-4">My works</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
-    </section>
-
-
-
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-			<div class="row">
-				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
-						<div class="img-about img d-flex align-items-stretch">
-							<div class="overlay">
-								<div class="row">
-									<div class="col-sm-6 col-md-5">
-									  <div class="about-img">
-										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
-									  </div>
-									</div>
-									<!-- Details next to profile image -->
-									<div class="col-sm-6 col-md-7">
-									  <div class="about-info">
-										<p><span class="title-s">Name: </span> <span>Pushpender</span></p>
-										<p><span class="title-s">Job Role: </span> <span>Aspiring Data Scientist & Data Analyst</span></p>
-										<p><span class="title-s">Experience: </span> <span>Fresher</span></p>
-										<p><span class="title-s">Address: </span> <span>Hodal,Haryana, India</span></p>
-									  </div>
-									</div>
-								  </div>
-
-								<div class="skill-mf">
-									<p class="title-s">Skills</p>
-									<span>SQL</span> <span class="pull-right">70%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>PYTHON</span> <span class="pull-right">75%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Data Visualization</span> <span class="pull-right">80%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Statistical Analysis</span> <span class="pull-right">75%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Machine Learning</span> <span class="pull-right">70%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big">About</h1>
-								<h2 class="mb-4">About Me</h2>
-								
-								<p>BCA Data Science graduate currently pursuing an MCA, with a strong foundation
-									 in statistical modeling, data wrangling, and exploratory data analysis.
-									  Proficient in Python, SQL, and Power BI, with hands-on project experience 
-									  turning raw datasets into actionable business insights. Seeking a Data Analyst 
-									  role to apply technical and analytical skills in a professional business environment.</p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li>
-									<li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce &amp; Healthcare </span></li>
-									<li class="d-flex"><span>Education:</span> <span>Master of Computer Application , <br> Bachelor of Computer Application in Data Science</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
-									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI,Tableau</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>Jupyter Notebook, Excel, Github, Google Colab</span></li>
-									<li class="d-flex"><span>Interest:</span> <span>Traveling, Movie Watching, Gaming</span></li>
-									
-								</ul>
-							</div>
-						</div>
-
-
-						<div class="counter-wrap ftco-animate d-flex mt-md-3">
-							<div class="text">
-								<p class="mb-4">
-									<span class="number" data-number="15">0</span> <span>+</span>
-									<span>&nbsp; Projects completed</span>
-								</p>
-								<p><a href="https://www.linkedin.com/in/push2003/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </section>
-
-
-
-	
-    <section class="ftco-section ftco-no-pb" id="resume-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p>BCA Data Science graduate currently pursuing an MCA, with a strong foundation in statistical modeling, data wrangling, and exploratory data analysis. Proficient in Python, SQL, and Power BI.</p>
-          </div>
-        </div>
-
-		<div class="row">
-			<h1 class="big-4">Experience</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-		<div class="row">
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2024-2025</span>
-						<h2>Data Analyst Trainee</h2>
-						<span class="position">Ducat South Extension,New Delhi</span>
-						<p class="mt-4">DUCAT India is a premier IT training and development organization specializing in delivering industry-aligned programs in Data Analytics, Data Science, and advanced software technologies through practical, hands-on learning . 
-							<ul>
-								<li>Master techniques to identify, clean, and organize raw datasets to ensure accuracy and readiness for analytical workflows.</li>
-								<li>Develop proficiency in essential industry tools including SQL for database querying, Excel for data manipulation, and Tableau or Power BI for visual reporting.</li>
-								<li>Collaborate with senior analytical team members to interpret processed data, build structured summaries, and assist in drafting operational insights for business stakeholders.</li>
-							</ul>
-						</p>
-					</div>
-
-				</div>
-
-				<!-- <div class="col-md-6"> -->
-					<!-- <div class="resume-wrap ftco-animate">
-						<span class="date">2016</span>
-						<h2>Senior Data Analyst</h2>
-						<span class="position">iQuanti</span>
-						<p class="mt-4">iQuanti is a data-driven digital marketing analytics and solutions company, helps top 100 global brands. 
-							<ul> -->
-								<!-- <li>Performed in-depth market research and analysis to create online pages. Resulted in ~100% website growth and 30% increase in conversion rate YoY.</li>
-								<li>Delivered multiple training and mentorship sessions on analytical tools like SQL, MS Excel, Power BI, Tableau and Python.</li>
-								<li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li> -->
-							</ul>
-						</p>
-					</div>
-
-				</div>
-			</div>
-
-		<br>
-		<br>
-
-		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-			<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2026-2028 </span>
-    					<h2>Master of Computer Application</h2>
-    					<span class="position">MVN University</span>
-    					<!-- <p class="mt-4">Grade: First class distinction.</p> -->
-    				</div>
-    			</div>
-
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2021–2024</span>
-    					<h2>Bachelor of Computer Applications in Data Science</h2>
-    					<span class="position">J.C. Bose University of Science and Technology, YMCA</span>
-    					<p class="mt-4">Grade: A+.</p>
-    				</div>
-				</div>
-    		</div>
-
-    		<div class="row justify-content-center mt-5">
-    			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="https://drive.google.com/file/d/1oCZ6DzHpAVfpq1l1qgSHJNopuDAjnXRa/view?usp=sharing" class="btn btn-primary py-4 px-5">Download CV</a></p>
-    			</div>
-    		</div>
-    	</div>
-    </section>
-
-   
-
-    <section class="ftco-section" id="project-section">
+    <!-- Sticky Navigation -->
+    <nav class="navbar navbar-expand-lg modern-navbar" id="modernNavbar">
       <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Projects</h2>
-            <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p>
-          </div>
+        <a class="navbar-brand navbar-brand-modern" href="#home-section" id="navbarBrand">
+          <span>Pushpender</span>
+          <span class="brand-dot"></span>
+        </a>
+        <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggleBtn">
+          <i class="fa fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto align-items-lg-center">
+            <li class="nav-item"><a href="#home-section" class="nav-link" id="navLinkHome">Home</a></li>
+            <li class="nav-item"><a href="#about-section" class="nav-link" id="navLinkAbout">About</a></li>
+            <li class="nav-item"><a href="#skills-section" class="nav-link" id="navLinkSkills">Skills</a></li>
+            <li class="nav-item"><a href="#project-section" class="nav-link" id="navLinkProjects">Projects</a></li>
+            <li class="nav-item"><a href="#resume-section" class="nav-link" id="navLinkResume">Experience</a></li>
+            <li class="nav-item"><a href="#contact-section" class="nav-link" id="navLinkContact">Contact</a></li>
+            <li class="nav-item ml-lg-3 mt-3 mt-lg-0">
+              <a href="https://drive.google.com/file/d/1oCZ6DzHpAVfpq1l1qgSHJNopuDAjnXRa/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn nav-cta-btn" id="navResumeCta">
+                <i class="fa fa-download mr-1"></i> Resume
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/pushpenderb65/CASE_STUDY_PROJ/blob/main/Proj.sql" class="block-20 zoom-effect" style="background-image: url('images/proj_1.png');">
-              </a>
-              <div class="text mt-3 float-right d-block">
+      </div>
+    </nav>
 
-                <h3 class="heading"><a href="https://github.com/pushpenderb65/CASE_STUDY_PROJ/blob/main/Proj.sql">Retail Sales Data Analysis using SQL</a></h3>
-                <p>Analyzed Retail Sales data using advanced SQL queires to identify gaps and increase the business growth.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/pushpenderb65/Retail_Sales_DA/blob/main/Retail_Sales.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_2.png');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/pushpenderb65/Retail_Sales_DA/blob/main/Retail_Sales.ipynb">Data Analysis using Python Project for Beginners</a></h3>
-                <p>Comprehensive analysis of retail sales data with detailed visualizations, insights, and business intelligence dashboards.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="https://github.com/pushpenderb65/E-Commerce-Dashboard/blob/main/Screenshot%202026-07-16%20112915.png" class="block-20 zoom-effect" style="background-image: url('images/proj_3.png');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/pushpenderb65/E-Commerce-Dashboard/blob/main/Screenshot%202026-07-16%20112915.png">Power BI Sales dashboard Project for Beginners</a></h3>
-                <p>A comprehensive Power BI dashboard for analyzing e-commerce sales analytics and business metrics.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-	<br>
-		<!-- added justify-content-center to center align the last two projects -->
-		<div class="row d-flex justify-content-center">  
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/pushpenderb65/Diabetes_Pred" class="block-20 zoom-effect" style="background-image: url('images/proj_4.png');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/pushpenderb65/Diabetes_Pred">Diabetes Prediction</a></h3>
-				  <p>A machine learning project that predicts diabetes risk using patient health data.</p>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/pushpenderb65/Movies-Recommendation-System" class="block-20 zoom-effect" style="background-image: url('images/proj_5.png');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading"><a href="https://github.com/pushpenderb65/Movies-Recommendation-System">Movies Recommendation System</a></h3>
-				  <p>A content-based movie recommendation system that suggests movies based on similarity to user preferences..</p>
-				</div>
-			  </div>
-			</div>
-			 <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="https://github.com/pushpenderb65/Sales-Dash-Power-BI/blob/main/Screenshot%202026-09-13%20213653.png" class="block-20 zoom-effect" style="background-image: url('images/proj_6.png');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/pushpenderb65/Sales-Dash-Power-BI/blob/main/Screenshot%202026-09-13%20213653.png">Power BI Sales dashboard Project for Beginners</a></h3>
-                <p>A comprehensive Power BI dashboard for analyzing e-commerce sales analytics and business metrics.</p>
-              </div>
-            </div>
-          </div>
-			
-		 </div>
-	  </div>
-    </section>
-
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+    <!-- Hero Section -->
+    <header id="home-section" class="modern-hero">
       <div class="container">
-		<div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="20">0</strong>
-                <span>Achievements</span>
+        <div class="row align-items-center">
+          <div class="col-lg-7 text-left">
+            <div class="hero-status-badge" id="heroStatusBadge">
+              <span class="pulse-dot"></span>
+              <span>Available for Data Analyst & Scientist Roles</span>
+            </div>
+            
+            <h1 class="hero-title" id="heroTitle">
+              Transforming Data Into <span class="text-gradient">Strategic Impact</span>
+            </h1>
+
+            <div class="hero-typing-wrap" id="heroTypingContainer">
+              <span class="text-muted mr-2">I am a</span>
+              <span class="hero-typing-text" id="modern-typewriter">Aspiring Data Scientist</span>
+              <span class="hero-typing-cursor"></span>
+            </div>
+
+            <p class="hero-desc" id="heroDescription">
+              BCA in Data Science graduate (A+) and current MCA scholar with practical mastery in 
+              statistical modeling, exploratory data analysis, SQL querying, and executive Power BI dashboards. 
+              Passionate about turning raw transactions into clear business stories.
+            </p>
+
+            <div class="hero-actions" id="heroActionsGroup">
+              <a href="#project-section" class="btn btn-modern-primary" id="btnExploreProjects">
+                <span>View Projects</span>
+                <i class="fa fa-arrow-right ml-1"></i>
+              </a>
+              <a href="https://drive.google.com/file/d/1oCZ6DzHpAVfpq1l1qgSHJNopuDAjnXRa/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-modern-secondary" id="btnDownloadResume">
+                <i class="fa fa-file-text-o mr-1"></i>
+                <span>Download Resume</span>
+              </a>
+              <a href="https://github.com/pushpenderb65" target="_blank" rel="noopener noreferrer" class="btn btn-modern-secondary" id="btnGithubHero" aria-label="GitHub Profile">
+                <i class="fa fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/push2003/" target="_blank" rel="noopener noreferrer" class="btn btn-modern-secondary" id="btnLinkedinHero" aria-label="LinkedIn Profile">
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </div>
+
+            <div class="hero-quick-stats" id="heroQuickStats">
+              <div class="quick-stat-item">
+                <div class="stat-num" id="statProjectsCount">15+</div>
+                <div class="stat-label">Projects Completed</div>
+              </div>
+              <div class="quick-stat-item">
+                <div class="stat-num" id="statTechCount">6+</div>
+                <div class="stat-label">Core Tech Stacks</div>
+              </div>
+              <div class="quick-stat-item">
+                <div class="stat-num" id="statGrade">A+</div>
+                <div class="stat-label">BCA Data Science</div>
               </div>
             </div>
           </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="15">0</strong>
-                <span>Projects</span>
+
+          <!-- Hero Image Profile Card -->
+          <div class="col-lg-5 mt-5 mt-lg-0">
+            <div class="hero-avatar-card" id="heroAvatarCard">
+              <div class="hero-avatar-glow"></div>
+              
+              <!-- Floating badges -->
+              <div class="floating-badge badge-top-left" id="floatingBadgeTop">
+                <div class="badge-icon" style="background: rgba(6, 182, 212, 0.15); color: #06b6d4;">
+                  <i class="fa fa-database"></i>
+                </div>
+                <div class="badge-text">
+                  <h5>SQL & Python</h5>
+                  <p>Data Wrangling & Analysis</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <!-- <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="1000">0</strong>
-                <span>Mentored Students</span>
+
+              <div class="hero-avatar-img-box" id="heroImgContainer">
+                <img src="images/about-me.png" alt="Pushpender - Data Scientist & Analyst" id="heroProfileImg">
               </div>
-            </div>
-          </div> -->
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="500">0</strong>
-                <span>Cups of coffee</span>
+
+              <div class="floating-badge badge-bottom-right" id="floatingBadgeBottom">
+                <div class="badge-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">
+                  <i class="fa fa-bar-chart"></i>
+                </div>
+                <div class="badge-text">
+                  <h5>Power BI & ML</h5>
+                  <p>Executive Visuals & Models</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-	
-	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
-				<div class="row justify-content-center">
-					<div class="col-md-7 ftco-animate text-center">
-						<h2>More projects on<span> Github  </span> </h2>
-						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
-						<br>
-						<p><a href="https://github.com/pushpenderb65" class="btn btn-primary py-3 px-5">GitHub</a></p>
-						</div>
-					</div>
-				</div>
-			<!-- </div> -->
-		</div>
-	</section>
+    </header>
 
-
-
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+    <!-- About Section -->
+    <section class="section-modern" id="about-section">
       <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
+        <div class="section-header">
+          <span class="section-tag">Biography</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-desc">Bridging analytical rigor, statistical modeling, and business problem-solving to uncover hidden opportunities.</p>
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col-lg-5 mb-4 mb-lg-0">
+            <div class="glass-card text-center" id="aboutPhotoCard">
+              <img src="images/about-me.png" alt="Pushpender Profile" class="img-fluid rounded mb-4" style="max-height: 380px; object-fit: cover;" id="aboutCardImg">
+              <h3 class="text-white font-weight-bold mb-1">Pushpender</h3>
+              <p class="text-cyan mb-3 font-weight-semibold" style="color: var(--accent-cyan);">Aspiring Data Scientist & Analyst</p>
+              
+              <div class="d-flex justify-content-center gap-2">
+                <a href="https://www.linkedin.com/in/push2003/" target="_blank" rel="noopener noreferrer" class="btn btn-modern-primary py-2 px-3 mr-2" id="aboutLinkedinBtn">
+                  <i class="fa fa-linkedin mr-1"></i> Connect
+                </a>
+                <a href="https://github.com/pushpenderb65" target="_blank" rel="noopener noreferrer" class="btn btn-modern-secondary py-2 px-3" id="aboutGithubBtn">
+                  <i class="fa fa-github mr-1"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7 pl-lg-4">
+            <div class="glass-card" id="aboutBioCard">
+              <h3 class="text-white mb-3 font-weight-bold">Passion for Data-Driven Solutions</h3>
+              <p class="mb-3">
+                I am a <strong>Bachelor of Computer Applications (BCA) in Data Science graduate (Grade A+)</strong> 
+                currently advancing my academic knowledge with a <strong>Master of Computer Applications (MCA)</strong>. 
+                My analytical foundation is built on statistical hypothesis testing, data wrangling, regression analysis, 
+                and interactive dashboard creation.
+              </p>
+              <p class="mb-4">
+                Through hands-on projects and industry training at <strong>Ducat (New Delhi)</strong>, 
+                I have tackled real-world challenges in retail sales trends, healthcare risk prediction, 
+                customer segmentation, and recommendation engines. I thrive on translating noisy datasets into structured, 
+                high-leverage decision models.
+              </p>
+
+              <div class="about-grid-info" id="aboutGridInfo">
+                <div class="about-info-item">
+                  <div class="info-label">Current Role</div>
+                  <div class="info-val">Data Analyst Trainee</div>
+                </div>
+                <div class="about-info-item">
+                  <div class="info-label">Education</div>
+                  <div class="info-val">MCA (In Progress) & BCA (A+)</div>
+                </div>
+                <div class="about-info-item">
+                  <div class="info-label">Location</div>
+                  <div class="info-val">Hodal, Haryana, India</div>
+                </div>
+                <div class="about-info-item">
+                  <div class="info-label">Target Industry Domains</div>
+                  <div class="info-val">Retail, E-Commerce, Healthcare</div>
+                </div>
+                <div class="about-info-item">
+                  <div class="info-label">Languages</div>
+                  <div class="info-val">English, Hindi</div>
+                </div>
+                <div class="about-info-item">
+                  <div class="info-label">Interests</div>
+                  <div class="info-val">Data Storytelling, Tech, Gaming</div>
+                </div>
+              </div>
+
+              <div class="d-flex flex-wrap align-items-center justify-content-between pt-3 border-top" style="border-color: var(--border-subtle) !important;">
+                <span class="text-muted font-weight-500">Ready to contribute to your data initiatives:</span>
+                <a href="#contact-section" class="btn btn-modern-primary py-2 px-4 mt-2 mt-sm-0" id="aboutContactPromptBtn">
+                  Let's Talk <i class="fa fa-envelope-o ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section class="section-modern" id="skills-section" style="background: rgba(17, 24, 39, 0.4);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Technical Competencies</span>
+          <h2 class="section-title">Core Skills & Tooling</h2>
+          <p class="section-desc">A structured toolkit tailored for modern exploratory analytics, database querying, business intelligence, and machine learning.</p>
+        </div>
+
+        <div class="row">
+          <!-- SQL & Querying -->
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="glass-card skills-domain-card" id="skillCardSql">
+              <div class="skills-domain-header">
+                <div class="domain-icon">
+                  <i class="fa fa-database"></i>
+                </div>
+                <h4 class="domain-title">SQL & Databases</h4>
+              </div>
+
+              <div class="skill-bar-row">
+                <div class="skill-bar-labels">
+                  <span class="skill-bar-name">SQL Queries & Joins</span>
+                  <span class="skill-bar-pct">85%</span>
+                </div>
+                <div class="modern-progress-track">
+                  <div class="modern-progress-fill" style="width: 85%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-row">
+                <div class="skill-bar-labels">
+                  <span class="skill-bar-name">CTEs & Window Functions</span>
+                  <span class="skill-bar-pct">80%</span>
+                </div>
+                <div class="modern-progress-track">
+                  <div class="modern-progress-fill" style="width: 80%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-row">
+                <div class="skill-bar-labels">
+                  <span class="skill-bar-name">Relational Schema Design</span>
+                  <span class="skill-bar-pct">75%</span>
+                </div>
+                <div class="modern-progress-track">
+                  <div class="modern-progress-fill" style="width: 75%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-pill-wrap">
+                <span class="skill-pill">PostgreSQL</span>
+                <span class="skill-pill">MySQL</span>
+                <span class="skill-pill">Aggregate Math</span>
+                <span class="skill-pill">Subqueries</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Python & Data Science -->
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="glass-card skills-domain-card" id="skillCardPython">
+              <div class="skills-domain-header">
+                <div class="domain-icon" style="color: #38bdf8; background: rgba(56, 189, 248, 0.1);">
+                  <i class="fa fa-code"></i>
+                </div>
+                <h4 class="domain-title">Python Analytics</h4>
+              </div>
+
+              <div class="skill-bar-row">
+                <div class="skill-bar-labels">
+                  <span class="skill-bar-name">Pandas & NumPy</span>
+                  <span class="skill-bar-pct">85%</span>
+                </div>
+                <div class="modern-progress-track">
+                  <div class="modern-progress-fill" style="width: 85%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-row">
+                <div class="skill-bar-labels">
+                  <span class="skill-bar-name">Exploratory Data Analysis</span>
+                  <span class="skill-bar-pct">80%</span>
+                </div>
+                <div class="modern-progress-track">
+                  <div class="modern-progress-fill" style="width: 80%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-row">
+                <div class="skill-bar-labels">
+                  <span class="skill-bar-name">Matplotlib & Seaborn</span>
+                  <span class="skill-bar-pct">80%</span>
+                </div>
+                <div class="modern-progress-track">
+                  <div class="modern-progress-fill" style="width: 80%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-pill-wrap">
+                <span class="skill-pill">Data Wrangling</span>
+                <span class="skill-pill">Jupyter</span>
+                <span class="skill-pill">Google Colab</span>
+                <span class="skill-pill">Imputation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Business Intelligence -->
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="glass-card skills-domain-card" id="skillCardBI">
+              <div class="skills-domain-header">
+                <div class="domain-icon" style="color: #f59e0b; background: rgba(245, 158, 11, 0.1);">
+                  <i class="fa fa-bar-chart"></i>
+                </div>
+                <h4 class="domain-title">BI & Reporting</h4>
+              </div>
+
+              <div class="skill-bar-row">
+                <div class="skill-bar-labels">
+                  <span class="skill-bar-name">Microsoft Power BI</span>
+                  <span class="skill-bar-pct">85%</span>
+                </div>
+                <div class="modern-progress-track">
+                  <div class="modern-progress-fill" style="width: 85%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-row">
+                <div class="skill-bar-labels">
+                  <span class="skill-bar-name">DAX Measures & Modeling</span>
+                  <span class="skill-bar-pct">75%</span>
+                </div>
+                <div class="modern-progress-track">
+                  <div class="modern-progress-fill" style="width: 75%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-row">
+                <div class="skill-bar-labels">
+                  <span class="skill-bar-name">Excel & Pivot Tables</span>
+                  <span class="skill-bar-pct">85%</span>
+                </div>
+                <div class="modern-progress-track">
+                  <div class="modern-progress-fill" style="width: 85%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-pill-wrap">
+                <span class="skill-pill">Tableau</span>
+                <span class="skill-pill">Star Schema</span>
+                <span class="skill-pill">KPI Cards</span>
+                <span class="skill-pill">Power Query</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Machine Learning -->
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="glass-card skills-domain-card" id="skillCardML">
+              <div class="skills-domain-header">
+                <div class="domain-icon" style="color: #10b981; background: rgba(16, 185, 129, 0.1);">
+                  <i class="fa fa-cogs"></i>
+                </div>
+                <h4 class="domain-title">Machine Learning</h4>
+              </div>
+
+              <div class="skill-bar-row">
+                <div class="skill-bar-labels">
+                  <span class="skill-bar-name">Classification & Regression</span>
+                  <span class="skill-bar-pct">75%</span>
+                </div>
+                <div class="modern-progress-track">
+                  <div class="modern-progress-fill" style="width: 75%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-row">
+                <div class="skill-bar-labels">
+                  <span class="skill-bar-name">Scikit-Learn</span>
+                  <span class="skill-bar-pct">75%</span>
+                </div>
+                <div class="modern-progress-track">
+                  <div class="modern-progress-fill" style="width: 75%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-row">
+                <div class="skill-bar-labels">
+                  <span class="skill-bar-name">Model Evaluation Metrics</span>
+                  <span class="skill-bar-pct">70%</span>
+                </div>
+                <div class="modern-progress-track">
+                  <div class="modern-progress-fill" style="width: 70%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-pill-wrap">
+                <span class="skill-pill">Feature Scaling</span>
+                <span class="skill-pill">Cosine Similarity</span>
+                <span class="skill-pill">ROC-AUC</span>
+                <span class="skill-pill">NLP Baselines</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section-modern" id="project-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Featured Works</span>
+          <h2 class="section-title">Data Analytics & ML Projects</h2>
+          <p class="section-desc">Selected projects highlighting SQL data modeling, exploratory analysis pipelines, business intelligence dashboards, and predictive algorithms.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="project-filter-bar" id="projectFilterBar">
+          <button type="button" class="filter-btn active" data-filter="all" id="filterAll">All Projects</button>
+          <button type="button" class="filter-btn" data-filter="sql" id="filterSql">SQL & Analytics</button>
+          <button type="button" class="filter-btn" data-filter="python" id="filterPython">Python & EDA</button>
+          <button type="button" class="filter-btn" data-filter="powerbi" id="filterPowerBi">Power BI Dashboards</button>
+          <button type="button" class="filter-btn" data-filter="ml" id="filterMl">Machine Learning</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="row" id="projectsGridContainer">
+
+          <!-- Project 1: SQL Retail Sales -->
+          <div class="col-md-6 col-lg-4 mb-4 project-item-col" data-category="sql">
+            <div class="project-card" id="projectCard1">
+              <div class="project-thumb-box">
+                <span class="project-badge-tag">SQL</span>
+                <img src="images/proj_1.png" alt="Retail Sales Data Analysis using SQL">
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Retail Sales Data Analysis</h3>
+                <p class="project-summary">
+                  Advanced SQL case study querying multi-store transactional data with window functions and CTEs to spot churn patterns and gross margin leaders.
+                </p>
+                <div class="project-tags">
+                  <span class="tag-badge">PostgreSQL</span>
+                  <span class="tag-badge">Window Functions</span>
+                  <span class="tag-badge">CTEs</span>
+                  <span class="tag-badge">Case Studies</span>
+                </div>
+                <div class="project-actions">
+                  <a href="https://github.com/pushpenderb65/CASE_STUDY_PROJ/blob/main/Proj.sql" target="_blank" rel="noopener noreferrer" class="btn-project-link" id="proj1GithubBtn">
+                    <i class="fa fa-github"></i> Code
+                  </a>
+                  <button type="button" class="btn-project-preview" data-id="1" id="proj1PreviewBtn">
+                    <i class="fa fa-eye"></i> Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Python Retail EDA -->
+          <div class="col-md-6 col-lg-4 mb-4 project-item-col" data-category="python">
+            <div class="project-card" id="projectCard2">
+              <div class="project-thumb-box">
+                <span class="project-badge-tag">Python & EDA</span>
+                <img src="images/proj_2.png" alt="Retail Sales Exploratory Data Analysis Python">
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Python Retail Sales EDA</h3>
+                <p class="project-summary">
+                  Comprehensive end-to-end data cleaning, anomaly detection, statistical distribution analysis, and business trend visualizer in Jupyter Notebook.
+                </p>
+                <div class="project-tags">
+                  <span class="tag-badge">Python</span>
+                  <span class="tag-badge">Pandas</span>
+                  <span class="tag-badge">NumPy</span>
+                  <span class="tag-badge">Seaborn</span>
+                </div>
+                <div class="project-actions">
+                  <a href="https://github.com/pushpenderb65/Retail_Sales_DA/blob/main/Retail_Sales.ipynb" target="_blank" rel="noopener noreferrer" class="btn-project-link" id="proj2GithubBtn">
+                    <i class="fa fa-github"></i> Notebook
+                  </a>
+                  <button type="button" class="btn-project-preview" data-id="2" id="proj2PreviewBtn">
+                    <i class="fa fa-eye"></i> Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Power BI E-Commerce -->
+          <div class="col-md-6 col-lg-4 mb-4 project-item-col" data-category="powerbi">
+            <div class="project-card" id="projectCard3">
+              <div class="project-thumb-box">
+                <span class="project-badge-tag">Power BI</span>
+                <img src="images/proj_3.png" alt="E-Commerce Sales Executive Dashboard Power BI">
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">E-Commerce Sales BI Dashboard</h3>
+                <p class="project-summary">
+                  Interactive multi-dimensional Power BI dashboard featuring dynamic DAX KPIs, monthly performance gauges, and regional order fulfillment breakdown.
+                </p>
+                <div class="project-tags">
+                  <span class="tag-badge">Power BI</span>
+                  <span class="tag-badge">DAX</span>
+                  <span class="tag-badge">Star Schema</span>
+                  <span class="tag-badge">KPI Cards</span>
+                </div>
+                <div class="project-actions">
+                  <a href="https://github.com/pushpenderb65/E-Commerce-Dashboard/blob/main/Screenshot%202026-07-16%20112915.png" target="_blank" rel="noopener noreferrer" class="btn-project-link" id="proj3GithubBtn">
+                    <i class="fa fa-external-link"></i> Visuals
+                  </a>
+                  <button type="button" class="btn-project-preview" data-id="3" id="proj3PreviewBtn">
+                    <i class="fa fa-eye"></i> Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Diabetes Prediction ML -->
+          <div class="col-md-6 col-lg-4 mb-4 project-item-col" data-category="ml">
+            <div class="project-card" id="projectCard4">
+              <div class="project-thumb-box">
+                <span class="project-badge-tag">Machine Learning</span>
+                <img src="images/proj_4.png" alt="Diabetes Prediction Healthcare Machine Learning">
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Healthcare Diabetes Prediction</h3>
+                <p class="project-summary">
+                  Supervised binary classification pipeline detecting clinical diabetic risk using patient physiological metrics with optimized ROC-AUC scoring.
+                </p>
+                <div class="project-tags">
+                  <span class="tag-badge">Scikit-Learn</span>
+                  <span class="tag-badge">Classification</span>
+                  <span class="tag-badge">Feature Engineering</span>
+                  <span class="tag-badge">Healthcare</span>
+                </div>
+                <div class="project-actions">
+                  <a href="https://github.com/pushpenderb65/Diabetes_Pred" target="_blank" rel="noopener noreferrer" class="btn-project-link" id="proj4GithubBtn">
+                    <i class="fa fa-github"></i> Repository
+                  </a>
+                  <button type="button" class="btn-project-preview" data-id="4" id="proj4PreviewBtn">
+                    <i class="fa fa-eye"></i> Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Movie Recommendation System -->
+          <div class="col-md-6 col-lg-4 mb-4 project-item-col" data-category="ml">
+            <div class="project-card" id="projectCard5">
+              <div class="project-thumb-box">
+                <span class="project-badge-tag">NLP & ML</span>
+                <img src="images/proj_5.png" alt="Content-Based Movie Recommendation System">
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Movie Recommendation Engine</h3>
+                <p class="project-summary">
+                  Content-based recommendation model calculating vector Cosine Similarity across textual metadata, genres, and cast details for instant recommendations.
+                </p>
+                <div class="project-tags">
+                  <span class="tag-badge">Python</span>
+                  <span class="tag-badge">NLP</span>
+                  <span class="tag-badge">Cosine Similarity</span>
+                  <span class="tag-badge">Vectorization</span>
+                </div>
+                <div class="project-actions">
+                  <a href="https://github.com/pushpenderb65/Movies-Recommendation-System" target="_blank" rel="noopener noreferrer" class="btn-project-link" id="proj5GithubBtn">
+                    <i class="fa fa-github"></i> Repository
+                  </a>
+                  <button type="button" class="btn-project-preview" data-id="5" id="proj5PreviewBtn">
+                    <i class="fa fa-eye"></i> Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: Power BI Sales Analytics -->
+          <div class="col-md-6 col-lg-4 mb-4 project-item-col" data-category="powerbi">
+            <div class="project-card" id="projectCard6">
+              <div class="project-thumb-box">
+                <span class="project-badge-tag">Power BI</span>
+                <img src="images/proj_6.png" alt="Executive Power BI Sales Analytics">
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Sales Analytics & Forecast</h3>
+                <p class="project-summary">
+                  Enterprise retail sales intelligence dashboard tracking seasonal revenue targets, customer segment lifetime metrics, and profit margin distributions.
+                </p>
+                <div class="project-tags">
+                  <span class="tag-badge">Power BI</span>
+                  <span class="tag-badge">DAX</span>
+                  <span class="tag-badge">Financial KPIs</span>
+                  <span class="tag-badge">Data Modeling</span>
+                </div>
+                <div class="project-actions">
+                  <a href="https://github.com/pushpenderb65/Sales-Dash-Power-BI/blob/main/Screenshot%202026-09-13%20213653.png" target="_blank" rel="noopener noreferrer" class="btn-project-link" id="proj6GithubBtn">
+                    <i class="fa fa-external-link"></i> Visuals
+                  </a>
+                  <button type="button" class="btn-project-preview" data-id="6" id="proj6PreviewBtn">
+                    <i class="fa fa-eye"></i> Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- GitHub Callout Banner -->
+        <div class="mt-5 p-4 rounded-lg text-center" style="background: rgba(255,255,255,0.02); border: 1px dashed var(--border-subtle);" id="githubCalloutBanner">
+          <p class="text-white font-weight-bold mb-2">Want to see more code repositories and analytical experiments?</p>
+          <p class="text-muted mb-3 font-size-sm">Explore my continuous commits, notebooks, and database schemas on GitHub.</p>
+          <a href="https://github.com/pushpenderb65" target="_blank" rel="noopener noreferrer" class="btn btn-modern-primary py-2 px-4" id="btnGithubExploreAll">
+            <i class="fa fa-github mr-2"></i> Visit GitHub Profile (@pushpenderb65)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education Timeline -->
+    <section class="section-modern" id="resume-section" style="background: rgba(17, 24, 39, 0.4);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Career & Credentials</span>
+          <h2 class="section-title">Experience & Education</h2>
+          <p class="section-desc">Academic foundation in computer science and practical analytics training preparing me for high-impact industry roles.</p>
+        </div>
+
+        <div class="row">
+          <!-- Experience Column -->
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <h3 class="text-white font-weight-bold mb-4 d-flex align-items-center">
+              <i class="fa fa-briefcase text-cyan mr-3" style="color: var(--accent-cyan);"></i> Practical Experience
+            </h3>
+
+            <div class="timeline-modern" id="experienceTimeline">
+              <div class="timeline-entry">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content-card">
+                  <span class="timeline-period">2024 — 2025</span>
+                  <h4 class="timeline-title">Data Analyst Trainee</h4>
+                  <div class="timeline-org">Ducat India — South Extension, New Delhi</div>
+                  <div class="timeline-body">
+                    <p class="mb-2 text-white-50">Intensive industry-aligned data analytics program focused on real enterprise datasets and practical analytical workflows:</p>
+                    <ul>
+                      <li>Mastered techniques to inspect, clean, deduplicate, and reshape raw tabular datasets into analytical data models.</li>
+                      <li>Built and executed complex SQL queries (multi-table joins, subqueries, CTEs, Window functions) to answer business inquiries.</li>
+                      <li>Designed dynamic operational dashboards in Microsoft Power BI and Tableau with actionable KPI summaries for cross-functional stakeholders.</li>
+                      <li>Collaborated with senior mentors to present structured exploratory findings and hypothesis-driven insights.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education Column -->
+          <div class="col-lg-6">
+            <h3 class="text-white font-weight-bold mb-4 d-flex align-items-center">
+              <i class="fa fa-graduation-cap text-cyan mr-3" style="color: var(--accent-cyan);"></i> Academic Credentials
+            </h3>
+
+            <div class="timeline-modern" id="educationTimeline">
+              <!-- MCA -->
+              <div class="timeline-entry">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content-card">
+                  <span class="timeline-period">2026 — 2028 (Pursuing)</span>
+                  <h4 class="timeline-title">Master of Computer Applications (MCA)</h4>
+                  <div class="timeline-org">MVN University</div>
+                  <div class="timeline-body">
+                    <p class="mb-0">
+                      Advanced post-graduate coursework deepening algorithmic problem-solving, advanced database management systems, cloud computing principles, and computational analytics.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- BCA in Data Science -->
+              <div class="timeline-entry">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content-card">
+                  <span class="timeline-period">2021 — 2024</span>
+                  <h4 class="timeline-title">Bachelor of Computer Applications (BCA)</h4>
+                  <div class="timeline-org">J.C. Bose UST, YMCA (Specialization in Data Science)</div>
+                  <div class="timeline-body">
+                    <div class="d-inline-block px-2 py-1 rounded mb-2" style="background: rgba(16, 185, 129, 0.15); color: #10b981; font-weight: 700; font-size: 0.8rem;">
+                      Final Grade: A+
+                    </div>
+                    <p class="mb-0">
+                      Comprehensive undergraduate curriculum covering probability & statistics, Python data programming, relational database systems, discrete mathematics, and exploratory machine learning.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="row d-flex contact-info mb-5">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <p>Hodal,Haryana, India</p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-phone2"></span>
-          		</div>
-          		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://0101010101">+91 9817109523</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
-          		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:info@yoursite.com">pushpenderb65@gmail.com</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
-          		</div>
-          		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="https://drive.google.com/file/d/1oCZ6DzHpAVfpq1l1qgSHJNopuDAjnXRa/view?usp=sharing">resumelink</a></p>
-	          </div>
+        <div class="text-center mt-5">
+          <a href="https://drive.google.com/file/d/1oCZ6DzHpAVfpq1l1qgSHJNopuDAjnXRa/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-modern-primary py-3 px-5" id="btnResumeTimeline">
+            <i class="fa fa-download mr-2"></i> Download Complete Resume (PDF)
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Connect Section -->
+    <section class="section-modern" id="contact-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Let's Connect & Collaborate</h2>
+          <p class="section-desc">Have a role, project idea, or data challenge? Reach out via email, phone, or LinkedIn.</p>
+        </div>
+
+        <!-- Contact Cards Row -->
+        <div class="row mb-5">
+          <!-- Card 1: Location -->
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="contact-item-card" id="contactCardLocation">
+              <div class="contact-icon-circle">
+                <i class="fa fa-map-marker"></i>
+              </div>
+              <h4 class="contact-card-title">Location</h4>
+              <p class="contact-card-val">Hodal, Haryana, India</p>
+              <span class="badge badge-secondary py-1 px-2 font-weight-normal">Open to Relocation & Remote</span>
+            </div>
           </div>
 
-		  <div class="container">
-			<br>
-			<br>
-			<div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="https://www.linkedin.com/in/push2003/" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
-				</div>
-			</div>
-				<br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/push2003/"><span class="icon-linkedin"></span></a></li>  
-				      <li class="ftco-animate"><a href="https://www.instagram.com/_Push_2003/"><span class="icon-instagram"></span></a></li>
-					</ul>
-				<br>
-		   </div>
-   </div>
- </section>
+          <!-- Card 2: Contact Number -->
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="contact-item-card" id="contactCardPhone">
+              <div class="contact-icon-circle">
+                <i class="fa fa-phone"></i>
+              </div>
+              <h4 class="contact-card-title">Direct Phone</h4>
+              <p class="contact-card-val"><a href="tel:+919817109523" class="text-white font-weight-bold">+91 9817109523</a></p>
+              <button type="button" class="copy-btn-mini" data-copy-target="+919817109523" data-label="Phone Number" id="copyPhoneBtn">
+                <i class="fa fa-copy mr-1"></i> Copy Phone
+              </button>
+            </div>
+          </div>
 
+          <!-- Card 3: Email Address -->
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="contact-item-card" id="contactCardEmail">
+              <div class="contact-icon-circle">
+                <i class="fa fa-envelope-o"></i>
+              </div>
+              <h4 class="contact-card-title">Email Address</h4>
+              <p class="contact-card-val"><a href="mailto:pushpenderb65@gmail.com" class="text-white font-weight-bold">pushpenderb65@gmail.com</a></p>
+              <button type="button" class="copy-btn-mini" data-copy-target="pushpenderb65@gmail.com" data-label="Email" id="copyEmailBtn">
+                <i class="fa fa-copy mr-1"></i> Copy Email
+              </button>
+            </div>
+          </div>
 
- 
-	
-    <footer class="ftco-footer ftco-section">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-12 text-center">
-  
-			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-			</div>
-		  </div>
-		</div>
-	  </footer>
+          <!-- Card 4: LinkedIn & WhatsApp -->
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div class="contact-item-card" id="contactCardSocials">
+              <div class="contact-icon-circle">
+                <i class="fa fa-linkedin"></i>
+              </div>
+              <h4 class="contact-card-title">Professional Network</h4>
+              <p class="contact-card-val">linkedin.com/in/push2003</p>
+              <a href="https://www.linkedin.com/in/push2003/" target="_blank" rel="noopener noreferrer" class="copy-btn-mini text-white" id="visitLinkedinCardBtn">
+                <i class="fa fa-external-link mr-1"></i> View LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
 
+        <!-- Interactive Direct Message Form -->
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="glass-card" id="contactFormCard">
+              <div class="d-flex align-items-center mb-4">
+                <div class="contact-icon-circle mr-3 mb-0" style="width: 44px; height: 44px; font-size: 1.1rem;">
+                  <i class="fa fa-paper-plane-o"></i>
+                </div>
+                <div>
+                  <h3 class="text-white font-weight-bold mb-0">Send a Direct Inquiry</h3>
+                  <p class="text-muted mb-0 font-size-sm">Drop a note to initiate an exploratory discussion or request references.</p>
+                </div>
+              </div>
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+              <form id="portfolioContactForm">
+                <div class="row">
+                  <div class="col-md-6 form-group mb-3">
+                    <label for="contactName" class="text-muted small font-weight-bold mb-1">YOUR NAME *</label>
+                    <input type="text" class="form-control modern-form-control" id="contactName" placeholder="e.g. Sarah Jenkins" required>
+                  </div>
+                  <div class="col-md-6 form-group mb-3">
+                    <label for="contactEmail" class="text-muted small font-weight-bold mb-1">YOUR EMAIL *</label>
+                    <input type="email" class="form-control modern-form-control" id="contactEmail" placeholder="e.g. sarah@company.com" required>
+                  </div>
+                </div>
 
+                <div class="form-group mb-3">
+                  <label for="contactSubject" class="text-muted small font-weight-bold mb-1">SUBJECT</label>
+                  <input type="text" class="form-control modern-form-control" id="contactSubject" placeholder="Data Analyst Role / Project Opportunity">
+                </div>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  
-  <script src="js/main.js"></script>
-    
+                <div class="form-group mb-4">
+                  <label for="contactMessage" class="text-muted small font-weight-bold mb-1">MESSAGE *</label>
+                  <textarea class="form-control modern-form-control" id="contactMessage" rows="4" placeholder="Hello Pushpender, we came across your portfolio and would like to connect regarding..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-modern-primary w-100 py-3 font-weight-bold" id="btnSubmitContact">
+                  <span>Send Message Directly</span>
+                  <i class="fa fa-paper-plane ml-2"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Modern Footer -->
+    <footer class="modern-footer" id="modernFooter">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+            <h5 class="text-white font-weight-bold mb-1">Pushpender</h5>
+            <p class="text-muted small mb-0">Aspiring Data Scientist &amp; Data Analyst | MCA Scholar</p>
+          </div>
+          <div class="col-md-6 text-center text-md-right">
+            <a href="https://github.com/pushpenderb65" target="_blank" rel="noopener noreferrer" class="footer-social-link" id="footerGithubLink" aria-label="GitHub Profile">
+              <i class="fa fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/push2003/" target="_blank" rel="noopener noreferrer" class="footer-social-link" id="footerLinkedinLink" aria-label="LinkedIn Profile">
+              <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/_Push_2003/" target="_blank" rel="noopener noreferrer" class="footer-social-link" id="footerInstagramLink" aria-label="Instagram Profile">
+              <i class="fa fa-instagram"></i>
+            </a>
+            <a href="mailto:pushpenderb65@gmail.com" class="footer-social-link" id="footerEmailLink" aria-label="Send Email">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+        <div class="text-center mt-4 pt-4 border-top" style="border-color: var(--border-subtle) !important;">
+          <p class="text-muted small mb-0">
+            &copy; 2026 Pushpender. All Rights Reserved. Crafted with high standards for Data Science &amp; Business Intelligence.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Interactive Project Details Modal -->
+    <div class="modal fade" id="projectDetailModal" tabindex="-1" role="dialog" aria-labelledby="modalProjectTitle" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content modal-content-modern">
+          <div class="modal-header modal-header-modern align-items-center">
+            <div>
+              <span class="project-badge-tag position-static mb-2 d-inline-block" id="modalProjectCategory">Category</span>
+              <h4 class="modal-title font-weight-bold text-white mb-0" id="modalProjectTitle">Project Title</h4>
+            </div>
+            <button type="button" class="btn-close-custom" data-dismiss="modal" aria-label="Close" id="modalCloseBtn">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body modal-body-modern">
+            <div class="mb-4 rounded overflow-hidden" style="max-height: 320px; background: #0b0f19;">
+              <img src="" alt="" class="img-fluid w-100" style="object-fit: contain; max-height: 320px;" id="modalProjectImg">
+            </div>
+
+            <h5 class="text-white font-weight-bold mb-2">Executive Summary</h5>
+            <p class="text-muted" id="modalProjectSummary"></p>
+
+            <div class="row my-3">
+              <div class="col-md-6 mb-3 mb-md-0">
+                <div class="p-3 rounded h-100" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle);">
+                  <h6 class="text-cyan font-weight-bold mb-2" style="color: var(--accent-cyan);"><i class="fa fa-question-circle mr-1"></i> Problem Statement</h6>
+                  <p class="text-muted small mb-0" id="modalProjectProblem"></p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 rounded h-100" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle);">
+                  <h6 class="text-cyan font-weight-bold mb-2" style="color: var(--accent-cyan);"><i class="fa fa-wrench mr-1"></i> Technical Approach</h6>
+                  <p class="text-muted small mb-0" id="modalProjectSolution"></p>
+                </div>
+              </div>
+            </div>
+
+            <h5 class="text-white font-weight-bold mb-2 mt-4">Key Analytical Insights</h5>
+            <ul class="text-muted small pl-3 mb-4" id="modalProjectInsights"></ul>
+
+            <h5 class="text-white font-weight-bold mb-2">Technologies &amp; Libraries Used</h5>
+            <div class="project-tags" id="modalProjectStack"></div>
+          </div>
+          <div class="modal-footer modal-footer-modern">
+            <button type="button" class="btn btn-modern-secondary py-2 px-3" data-dismiss="modal" id="modalDismissBtn">Close</button>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-modern-primary py-2 px-4" id="modalProjectGithub">
+              <i class="fa fa-github mr-1"></i> Open Repository / Artifact
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Back To Top Button -->
+    <button type="button" id="back-to-top-btn" aria-label="Scroll back to top">
+      <i class="fa fa-chevron-up"></i>
+    </button>
+
+    <!-- Floating Copy Toast Notification -->
+    <div id="copy-toast">✓ Copied to clipboard!</div>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/modern-portfolio.js"></script>
   </body>
 </html>
