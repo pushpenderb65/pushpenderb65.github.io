@@ -1,0 +1,535 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="cyberBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a12" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+
+    <radialGradient id="ambientCyanGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#3b82f6" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="screenFaceLight" cx="50%" cy="80%" r="60%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.28" />
+      <stop offset="60%" stop-color="#06b6d4" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Character Gradients -->
+    <linearGradient id="skinTone" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fcd5b8" />
+      <stop offset="100%" stop-color="#f1b58f" />
+    </linearGradient>
+
+    <linearGradient id="skinShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e2a078" />
+      <stop offset="100%" stop-color="#cf8c64" />
+    </linearGradient>
+
+    <linearGradient id="hairStyle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a1b18" />
+      <stop offset="50%" stop-color="#18110e" />
+      <stop offset="100%" stop-color="#0d0908" />
+    </linearGradient>
+
+    <linearGradient id="hoodieBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="40%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+
+    <linearGradient id="hoodieSleeves" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#243247" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <linearGradient id="monitorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#060911" />
+    </linearGradient>
+
+    <!-- Code Editor Window Gradients -->
+    <linearGradient id="editorCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(15, 23, 42, 0.92)" />
+      <stop offset="100%" stop-color="rgba(10, 15, 29, 0.96)" />
+    </linearGradient>
+
+    <!-- Neon Filters -->
+    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="purpleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Built-in Smooth Keyframe Animations -->
+    <style>
+      .script-window-left {
+        animation: floatScriptLeft 5s ease-in-out infinite alternate;
+        transform-origin: center center;
+      }
+      .script-window-right {
+        animation: floatScriptRight 5.5s ease-in-out infinite alternate;
+        transform-origin: center center;
+      }
+      .matrix-stream {
+        animation: streamFade 4s ease-in-out infinite alternate;
+      }
+      .cursor-blink {
+        animation: cursorBlink 1s step-end infinite;
+      }
+      .status-pulse {
+        animation: statusBlink 1.6s ease-in-out infinite alternate;
+      }
+      .character-motion {
+        animation: devBreathing 6s ease-in-out infinite alternate;
+        transform-origin: 400px 580px;
+      }
+      .steam-drift {
+        animation: steamDrift 2.8s ease-in-out infinite;
+      }
+
+      @keyframes floatScriptLeft {
+        0% { transform: translateY(0px) rotate(0deg); }
+        100% { transform: translateY(-8px) rotate(0.4deg); }
+      }
+      @keyframes floatScriptRight {
+        0% { transform: translateY(0px) rotate(0deg); }
+        100% { transform: translateY(-9px) rotate(-0.4deg); }
+      }
+      @keyframes streamFade {
+        0% { opacity: 0.2; }
+        100% { opacity: 0.45; }
+      }
+      @keyframes cursorBlink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      @keyframes statusBlink {
+        0% { opacity: 0.4; transform: scale(0.9); }
+        100% { opacity: 1; transform: scale(1.1); filter: drop-shadow(0 0 6px #10b981); }
+      }
+      @keyframes devBreathing {
+        0% { transform: translateY(0px); }
+        100% { transform: translateY(-3px); }
+      }
+      @keyframes steamDrift {
+        0% { transform: translateY(0) scaleY(1); opacity: 0.15; }
+        50% { transform: translateY(-7px) scaleY(1.2); opacity: 0.65; }
+        100% { transform: translateY(-15px) scaleY(1.4); opacity: 0; }
+      }
+    </style>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="800" rx="22" fill="url(#cyberBg)" />
+
+  <!-- Ambient Light Center Radial Glow -->
+  <rect width="800" height="800" rx="22" fill="url(#ambientCyanGlow)" />
+
+  <!-- Matrix Background Code Texture (Faint watermarks of Python & SQL) -->
+  <g font-family="'Fira Code', 'Cascadia Code', monospace" font-size="10.5" fill="rgba(56, 189, 248, 0.07)" class="matrix-stream">
+    <text x="30" y="50">import pandas as pd; import numpy as np</text>
+    <text x="30" y="70">from sklearn.ensemble import RandomForestClassifier</text>
+    <text x="30" y="90">df = pd.read_sql("SELECT * FROM retail_db.sales", engine)</text>
+    <text x="30" y="110">df.groupby(['region', 'category']).agg({'revenue':'sum'})</text>
+    <text x="30" y="130">SELECT order_id, customer_id, SUM(net_sales) OVER (PARTITION BY region)</text>
+    <text x="30" y="150">WHERE is_returned = 0 AND order_date &gt;= '2024-01-01'</text>
+    <text x="30" y="170">model = XGBClassifier(learning_rate=0.05, n_estimators=200)</text>
+    
+    <text x="440" y="50">CREATE TABLE analytics.customer_churn_summary (</text>
+    <text x="440" y="70">  customer_id BIGINT PRIMARY KEY, churn_risk_score FLOAT,</text>
+    <text x="440" y="90">  predicted_class VARCHAR(20), last_active_date DATE);</text>
+    <text x="440" y="110">sns.heatmap(df.corr(), annot=True, cmap='viridis')</text>
+    <text x="440" y="130">scaler = StandardScaler().fit(X_train)</text>
+    <text x="440" y="150">SELECT DENSE_RANK() OVER (ORDER BY revenue DESC) AS rank</text>
+    <text x="440" y="170">plt.title('Monthly Sales Trajectory &amp; Cohort Retention')</text>
+  </g>
+
+  <!-- ==================== BACKGROUND PYTHON SCRIPT WINDOW (RIGHT SIDE) ==================== -->
+  <g transform="translate(460, 65)" class="script-window-right">
+    <!-- Window Frame -->
+    <rect width="310" height="235" rx="14" fill="url(#editorCardBg)" stroke="rgba(56, 189, 248, 0.35)" stroke-width="1.5" />
+    
+    <!-- Title Bar -->
+    <rect width="310" height="32" rx="14" fill="rgba(15, 23, 42, 0.95)" />
+    <circle cx="18" cy="16" r="4.5" fill="#f87171" />
+    <circle cx="32" cy="16" r="4.5" fill="#fbbf24" />
+    <circle cx="46" cy="16" r="4.5" fill="#34d399" />
+    
+    <!-- Tab pill -->
+    <rect x="65" y="6" width="135" height="22" rx="6" fill="#1e293b" />
+    <text x="75" y="21" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="10.5" font-weight="700">🐍 churn_model.py</text>
+    
+    <circle cx="288" cy="16" r="4" fill="#10b981" class="status-pulse" />
+
+    <!-- Python Script Code -->
+    <g font-family="'Fira Code', Consolas, monospace" font-size="10" transform="translate(16, 48)" xml:space="preserve">
+      <text y="0"><tspan fill="#64748b"># ML Pipeline &amp; Feature Engineering</tspan></text>
+      <text y="16"><tspan fill="#f43f5e" font-weight="700">import</tspan><tspan fill="#e2e8f0"> pandas </tspan><tspan fill="#f43f5e" font-weight="700">as</tspan><tspan fill="#38bdf8"> pd</tspan></text>
+      <text y="32"><tspan fill="#f43f5e" font-weight="700">from</tspan><tspan fill="#e2e8f0"> xgboost </tspan><tspan fill="#f43f5e" font-weight="700">import</tspan><tspan fill="#a78bfa"> XGBClassifier</tspan></text>
+      <text y="48"><tspan fill="#e2e8f0">df = pd.read_csv(</tspan><tspan fill="#10b981">'churn_data.csv'</tspan><tspan fill="#e2e8f0">)</tspan></text>
+      <text y="64"><tspan fill="#e2e8f0">X = df.drop([</tspan><tspan fill="#10b981">'churn'</tspan><tspan fill="#e2e8f0">, </tspan><tspan fill="#10b981">'id'</tspan><tspan fill="#e2e8f0">], axis=</tspan><tspan fill="#fbbf24">1</tspan><tspan fill="#e2e8f0">)</tspan></text>
+      <text y="80"><tspan fill="#e2e8f0">y = df[</tspan><tspan fill="#10b981">'churn'</tspan><tspan fill="#e2e8f0">]</tspan></text>
+      <text y="96"><tspan fill="#64748b"># Train XGBoost with balanced weights</tspan></text>
+      <text y="112"><tspan fill="#e2e8f0">model = XGBClassifier(n_est=</tspan><tspan fill="#fbbf24">150</tspan><tspan fill="#e2e8f0">, lr=</tspan><tspan fill="#fbbf24">0.05</tspan><tspan fill="#e2e8f0">)</tspan></text>
+      <text y="128"><tspan fill="#e2e8f0">model.fit(X_train, y_train)</tspan></text>
+      <text y="144"><tspan fill="#38bdf8">auc_score</tspan><tspan fill="#e2e8f0"> = roc_auc(y_test, y_pred)</tspan></text>
+      <text y="160"><tspan fill="#e2e8f0">print(</tspan><tspan fill="#10b981">f"ROC-AUC: {auc_score:.4f}"</tspan><tspan fill="#e2e8f0">)</tspan><tspan fill="#38bdf8" class="cursor-blink">|</tspan></text>
+    </g>
+
+    <!-- Mini Evaluation Output Bar -->
+    <g transform="translate(16, 212)">
+      <rect width="278" height="15" rx="4" fill="#0d1424" />
+      <text x="8" y="11" fill="#34d399" font-family="monospace" font-size="9" font-weight="700">✓ Output: ROC-AUC = 0.9421 | Accuracy: 96.4%</text>
+    </g>
+  </g>
+
+  <!-- ==================== BACKGROUND SQL SCRIPT WINDOW (LEFT SIDE) ==================== -->
+  <g transform="translate(30, 65)" class="script-window-left">
+    <!-- Window Frame -->
+    <rect width="310" height="235" rx="14" fill="url(#editorCardBg)" stroke="rgba(6, 182, 212, 0.35)" stroke-width="1.5" />
+    
+    <!-- Title Bar -->
+    <rect width="310" height="32" rx="14" fill="rgba(15, 23, 42, 0.95)" />
+    <circle cx="18" cy="16" r="4.5" fill="#f87171" />
+    <circle cx="32" cy="16" r="4.5" fill="#fbbf24" />
+    <circle cx="46" cy="16" r="4.5" fill="#34d399" />
+    
+    <!-- Tab pill -->
+    <rect x="65" y="6" width="135" height="22" rx="6" fill="#1e293b" />
+    <text x="75" y="21" fill="#06b6d4" font-family="'Fira Code', monospace" font-size="10.5" font-weight="700">🗄️ retail_analytics.sql</text>
+
+    <text x="295" y="20" fill="#64748b" font-family="sans-serif" font-size="11" text-anchor="end">SQL</text>
+
+    <!-- SQL Script Code -->
+    <g font-family="'Fira Code', Consolas, monospace" font-size="10" transform="translate(16, 48)" xml:space="preserve">
+      <text y="0"><tspan fill="#64748b">-- Advanced Revenue CTE &amp; Window Function</tspan></text>
+      <text y="16"><tspan fill="#f43f5e" font-weight="700">WITH</tspan><tspan fill="#38bdf8"> RegionalRevenue </tspan><tspan fill="#f43f5e" font-weight="700">AS</tspan><tspan fill="#e2e8f0"> (</tspan></text>
+      <text y="32"><tspan fill="#f43f5e" font-weight="700">  SELECT</tspan></text>
+      <text y="48"><tspan fill="#e2e8f0">    region, channel,</tspan></text>
+      <text y="64"><tspan fill="#06b6d4" font-weight="700">    SUM</tspan><tspan fill="#e2e8f0">(net_sales) </tspan><tspan fill="#f43f5e" font-weight="700">AS</tspan><tspan fill="#38bdf8"> total_rev,</tspan></text>
+      <text y="80"><tspan fill="#a78bfa" font-weight="700">    DENSE_RANK</tspan><tspan fill="#e2e8f0">() </tspan><tspan fill="#f43f5e" font-weight="700">OVER</tspan><tspan fill="#e2e8f0"> (</tspan></text>
+      <text y="96"><tspan fill="#f43f5e" font-weight="700">      PARTITION BY</tspan><tspan fill="#e2e8f0"> region</tspan></text>
+      <text y="112"><tspan fill="#f43f5e" font-weight="700">      ORDER BY</tspan><tspan fill="#06b6d4"> SUM</tspan><tspan fill="#e2e8f0">(net_sales) </tspan><tspan fill="#f43f5e" font-weight="700">DESC</tspan></text>
+      <text y="128"><tspan fill="#e2e8f0">    ) </tspan><tspan fill="#f43f5e" font-weight="700">AS</tspan><tspan fill="#38bdf8"> regional_rank</tspan></text>
+      <text y="144"><tspan fill="#f43f5e" font-weight="700">  FROM</tspan><tspan fill="#e2e8f0"> retail_db.sales_transactions</tspan></text>
+      <text y="160"><tspan fill="#f43f5e" font-weight="700">  WHERE</tspan><tspan fill="#e2e8f0"> is_returned = </tspan><tspan fill="#10b981">'No'</tspan></text>
+    </g>
+
+    <!-- Mini Execution Output Bar -->
+    <g transform="translate(16, 212)">
+      <rect width="278" height="15" rx="4" fill="#0d1424" />
+      <text x="8" y="11" fill="#38bdf8" font-family="monospace" font-size="9" font-weight="700">✓ Query executed: 1,500 rows affected (14.2ms)</text>
+    </g>
+  </g>
+
+  <!-- ==================== ULTRAWIDE CURVED MONITOR & DESK ==================== -->
+
+  <!-- Ultrawide Curved Monitor (behind character) -->
+  <g transform="translate(140, 260)">
+    <!-- Bezel -->
+    <rect x="0" y="0" width="520" height="235" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2.5" />
+    <!-- Screen Glass -->
+    <rect x="10" y="10" width="500" height="215" rx="12" fill="url(#monitorGrad)" />
+
+    <!-- Monitor Top Bar -->
+    <rect x="18" y="16" width="484" height="22" rx="5" fill="#090d16" />
+    <circle cx="28" cy="27" r="3.5" fill="#06b6d4" />
+    <text x="38" y="31" fill="#94a3b8" font-family="sans-serif" font-size="9.5" font-weight="700">DATA ANALYSIS &amp; BUSINESS INTELLIGENCE DASHBOARD</text>
+    <text x="490" y="31" fill="#10b981" font-family="monospace" font-size="9" font-weight="700" text-anchor="end">STATUS: ACTIVE ●</text>
+
+    <!-- Screen Left Panel: Area Line Chart -->
+    <g transform="translate(18, 44)">
+      <rect width="235" height="100" rx="6" fill="#0d1117" stroke="rgba(255,255,255,0.05)" />
+      <text x="10" y="16" fill="#38bdf8" font-family="sans-serif" font-size="9" font-weight="700">Sales Trend Trajectory ($)</text>
+      <!-- Area Line -->
+      <polygon points="12,85 12,65 50,55 90,68 130,42 170,48 210,24 225,20 225,85" fill="rgba(6, 182, 212, 0.2)" />
+      <polyline points="12,65 50,55 90,68 130,42 170,48 210,24 225,20" fill="none" stroke="#06b6d4" stroke-width="2.2" filter="url(#cyanGlow)" />
+      <circle cx="225" cy="20" r="3" fill="#ffffff" />
+    </g>
+
+    <!-- Screen Right Panel: Bar Chart -->
+    <g transform="translate(265, 44)">
+      <rect width="235" height="100" rx="6" fill="#0d1117" stroke="rgba(255,255,255,0.05)" />
+      <text x="10" y="16" fill="#a78bfa" font-family="sans-serif" font-size="9" font-weight="700">Model Feature Importance</text>
+      <!-- Horizontal Bars -->
+      <g transform="translate(10, 26)" font-family="sans-serif" font-size="8" fill="#94a3b8">
+        <text x="0" y="8">HbA1c / Glucose</text>
+        <rect x="80" y="0" width="135" height="9" rx="3" fill="#06b6d4" />
+
+        <text x="0" y="24">Credit Score</text>
+        <rect x="80" y="16" width="115" height="9" rx="3" fill="#8b5cf6" />
+
+        <text x="0" y="40">Account Balance</text>
+        <rect x="80" y="32" width="95" height="9" rx="3" fill="#ec4899" />
+
+        <text x="0" y="56">Customer Age</text>
+        <rect x="80" y="48" width="70" height="9" rx="3" fill="#fbbf24" />
+      </g>
+    </g>
+
+    <!-- Screen Lower Data Grid Stream -->
+    <g transform="translate(18, 150)">
+      <rect width="484" height="65" rx="6" fill="#070a12" />
+      <g font-family="monospace" font-size="8.5" fill="#64748b" transform="translate(10, 16)">
+        <text x="0" y="0" fill="#94a3b8" font-weight="700">INDEX</text>
+        <text x="50" y="0" fill="#94a3b8" font-weight="700">QUERY_NAME</text>
+        <text x="180" y="0" fill="#94a3b8" font-weight="700">PARAMETERS</text>
+        <text x="320" y="0" fill="#94a3b8" font-weight="700">LATENCY</text>
+        <text x="410" y="0" fill="#94a3b8" font-weight="700">RESULT</text>
+
+        <text x="0" y="18" fill="#e2e8f0">001</text>
+        <text x="50" y="18" fill="#38bdf8">Retail_EDA.aggregate()</text>
+        <text x="180" y="18" fill="#cbd5e1">store_id=104, q=4</text>
+        <text x="320" y="18" fill="#34d399">12.4 ms</text>
+        <text x="410" y="18" fill="#10b981" font-weight="700">200 OK</text>
+
+        <text x="0" y="34" fill="#e2e8f0">002</text>
+        <text x="50" y="34" fill="#a78bfa">XGBoost.predict_proba()</text>
+        <text x="180" y="34" fill="#cbd5e1">batch_size=256</text>
+        <text x="320" y="34" fill="#34d399">18.1 ms</text>
+        <text x="410" y="34" fill="#10b981" font-weight="700">PREDICTED</text>
+      </g>
+    </g>
+
+    <!-- Monitor Stand -->
+    <path d="M 235 235 L 230 300 L 290 300 L 285 235 Z" fill="#334155" />
+    <ellipse cx="260" cy="300" rx="55" ry="9" fill="#1e293b" />
+  </g>
+
+  <!-- Modern Desk Surface -->
+  <g transform="translate(60, 565)">
+    <!-- Desk surface plate -->
+    <polygon points="0,35 680,35 635,0 45,0" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+    <!-- Desk front bevel -->
+    <rect x="0" y="35" width="680" height="20" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <!-- LED neon edge strip -->
+    <rect x="15" y="53" width="650" height="3" fill="#06b6d4" opacity="0.85" filter="url(#cyanGlow)" />
+
+    <!-- Coffee Mug on desk -->
+    <g transform="translate(90, 8)">
+      <rect x="0" y="0" width="28" height="32" rx="5" fill="#38bdf8" />
+      <path d="M 28 8 C 36 8, 36 24, 28 24" fill="none" stroke="#38bdf8" stroke-width="3" />
+      <text x="14" y="20" fill="#0f172a" font-family="monospace" font-size="8.5" font-weight="900" text-anchor="middle">&lt;SQL&gt;</text>
+      <!-- Steam -->
+      <g class="steam-drift">
+        <path d="M 9 -4 Q 6 -12, 11 -19" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round" />
+        <path d="M 18 -4 Q 21 -12, 15 -19" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round" />
+      </g>
+    </g>
+
+    <!-- Mousepad & Mouse on right desk -->
+    <g transform="translate(545, 12)">
+      <rect x="0" y="0" width="55" height="30" rx="6" fill="#0d1117" stroke="#334155" stroke-width="1" />
+      <ellipse cx="27" cy="15" rx="11" ry="15" fill="#38bdf8" opacity="0.9" />
+      <line x1="27" y1="4" x2="27" y2="15" stroke="#0f172a" stroke-width="1.5" />
+    </g>
+  </g>
+
+  <!-- ==================== THE BOY / DATA ANALYST (SEAMLESSLY INTEGRATED) ==================== -->
+  <!-- Fully connected anatomical structure: Chair -> Torso -> Collar -> Neck -> Head -> Hair -> Arms -> Laptop -->
+  <g id="fullCharacter" class="character-motion">
+
+    <!-- Ergonomic Gaming/Office Chair (Directly behind boy) -->
+    <g transform="translate(270, 310)">
+      <!-- Chair Headrest -->
+      <rect x="65" y="0" width="130" height="50" rx="20" fill="#1e293b" stroke="#334155" stroke-width="2" />
+      <rect x="75" y="8" width="110" height="34" rx="14" fill="#0f172a" />
+      <!-- Chair Backrest -->
+      <rect x="15" y="45" width="230" height="270" rx="35" fill="#131c2e" stroke="#1e293b" stroke-width="2.5" />
+      <!-- Ergonomic bolster cushions -->
+      <path d="M 35 110 Q 130 125, 225 110" fill="none" stroke="#1e293b" stroke-width="3" />
+      <path d="M 35 180 Q 130 195, 225 180" fill="none" stroke="#1e293b" stroke-width="3" />
+      <path d="M 35 250 Q 130 265, 225 250" fill="none" stroke="#1e293b" stroke-width="3" />
+    </g>
+
+    <!-- BODY & SHOULDERS (Solid base starting at y=460) -->
+    <g id="bodyTorso">
+      <!-- Main Upper Body / Hoodie Back & Shoulders -->
+      <!-- Smooth curve from left shoulder through neck line down to right shoulder and hips -->
+      <path d="M 285 520 
+               C 290 480, 320 460, 350 455 
+               L 450 455 
+               C 480 460, 510 480, 515 520 
+               L 535 690 
+               L 265 690 Z" fill="url(#hoodieBody)" />
+
+      <!-- Chest Center Panel & Shadow -->
+      <path d="M 350 455 
+               Q 400 485, 450 455 
+               L 440 680 
+               L 360 680 Z" fill="#0b0f19" opacity="0.6" />
+
+      <!-- Data Scientist Emblem on Chest -->
+      <g transform="translate(400, 520)">
+        <circle cx="0" cy="0" r="14" fill="rgba(6, 182, 212, 0.15)" stroke="#06b6d4" stroke-width="1.5" />
+        <!-- Data nodes icon -->
+        <circle cx="-5" cy="4" r="2.5" fill="#38bdf8" />
+        <circle cx="5" cy="4" r="2.5" fill="#38bdf8" />
+        <circle cx="0" cy="-4" r="3" fill="#06b6d4" />
+        <line x1="-5" y1="4" x2="0" y2="-4" stroke="#38bdf8" stroke-width="1.5" />
+        <line x1="5" y1="4" x2="0" y2="-4" stroke="#38bdf8" stroke-width="1.5" />
+      </g>
+    </g>
+
+    <!-- NECK & COLLAR (Seamless bridge directly joining head and body) -->
+    <g id="neckAndCollar">
+      <!-- Solid Neck Base (firmly planted inside the collar) -->
+      <!-- Extends from y=415 down into y=465 so there can NEVER be a visual gap -->
+      <rect x="375" y="415" width="50" height="50" rx="10" fill="url(#skinTone)" />
+      
+      <!-- Neck Shadow under jawline -->
+      <path d="M 375 422 Q 400 436, 425 422 L 425 448 L 375 448 Z" fill="url(#skinShadow)" opacity="0.5" />
+
+      <!-- Realistic Hoodie Collar Structure (Wraps around the neck seamlessly) -->
+      <path d="M 345 455 
+               C 365 478, 435 478, 455 455 
+               C 440 488, 360 488, 345 455 Z" fill="#111827" stroke="#06b6d4" stroke-width="2" />
+      
+      <!-- Hoodie Drawstrings -->
+      <path d="M 370 475 L 366 525" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" />
+      <circle cx="366" cy="525" r="2.5" fill="#38bdf8" />
+      <path d="M 430 475 L 434 525" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" />
+      <circle cx="434" cy="525" r="2.5" fill="#38bdf8" />
+    </g>
+
+    <!-- HEAD & FACE (Anchored directly over the neck) -->
+    <!-- Center is x=400, Chin is at y=425 resting right on the neck at y=415-440 -->
+    <g id="headGroup">
+      
+      <!-- Left & Right Ears -->
+      <ellipse cx="348" cy="385" rx="8" ry="13" fill="url(#skinTone)" />
+      <ellipse cx="452" cy="385" rx="8" ry="13" fill="url(#skinTone)" />
+
+      <!-- Head Base & Natural Jawline -->
+      <!-- Smooth polygon/path: Top head -> cheeks -> tapered rounded chin at y=425 -->
+      <path d="M 352 355 
+               C 348 310, 452 310, 448 355 
+               L 448 385 
+               C 448 412, 425 426, 400 426 
+               C 375 426, 352 412, 352 385 Z" fill="url(#skinTone)" />
+
+      <!-- Screen Light Glow on Face -->
+      <ellipse cx="400" cy="390" rx="40" ry="32" fill="url(#screenFaceLight)" />
+
+      <!-- Realistic Eyebrows (Focused, analytical) -->
+      <path d="M 368 368 Q 380 363, 391 368" fill="none" stroke="#2a1b18" stroke-width="2.5" stroke-linecap="round" />
+      <path d="M 409 368 Q 420 363, 432 368" fill="none" stroke="#2a1b18" stroke-width="2.5" stroke-linecap="round" />
+
+      <!-- Modern Glasses (Smart tech frame with cyan reflection) -->
+      <rect x="364" y="372" width="28" height="18" rx="4" fill="none" stroke="#38bdf8" stroke-width="2" />
+      <rect x="408" y="372" width="28" height="18" rx="4" fill="none" stroke="#38bdf8" stroke-width="2" />
+      <!-- Bridge & Temples -->
+      <line x1="392" y1="380" x2="408" y2="380" stroke="#38bdf8" stroke-width="2" />
+      <line x1="348" y1="378" x2="364" y2="378" stroke="#38bdf8" stroke-width="2" />
+      <line x1="436" y1="378" x2="452" y2="378" stroke="#38bdf8" stroke-width="2" />
+
+      <!-- Eyes (Inside glasses lenses) -->
+      <ellipse cx="378" cy="381" rx="4" ry="4.5" fill="#17100d" />
+      <ellipse cx="422" cy="381" rx="4" ry="4.5" fill="#17100d" />
+      <!-- Catchlight highlights -->
+      <circle cx="379" cy="379" r="1.3" fill="#ffffff" />
+      <circle cx="423" cy="379" r="1.3" fill="#ffffff" />
+
+      <!-- Lens Glare Shimmer -->
+      <line x1="367" y1="375" x2="374" y2="386" stroke="rgba(255,255,255,0.7)" stroke-width="1.2" stroke-linecap="round" />
+      <line x1="411" y1="375" x2="418" y2="386" stroke="rgba(255,255,255,0.7)" stroke-width="1.2" stroke-linecap="round" />
+
+      <!-- Nose (Defined & natural) -->
+      <path d="M 400 379 L 397 396 L 404 396" fill="none" stroke="#cf8c64" stroke-width="2" stroke-linecap="round" />
+
+      <!-- Pleasant, Confident Smile -->
+      <path d="M 390 408 Q 400 415, 410 408" fill="none" stroke="#b46845" stroke-width="2.5" stroke-linecap="round" />
+
+      <!-- Stylish Hair (Layered on top of forehead naturally) -->
+      <path d="M 346 355 
+               C 344 295, 375 285, 400 285 
+               C 430 285, 456 298, 454 355 
+               C 454 360, 442 342, 428 338 
+               C 412 334, 395 338, 380 342 
+               C 365 346, 350 358, 346 355 Z" fill="url(#hairStyle)" />
+      
+      <!-- Sideburns connecting down to ears -->
+      <path d="M 352 355 L 354 378 L 358 378 L 356 355 Z" fill="url(#hairStyle)" />
+      <path d="M 448 355 L 446 378 L 442 378 L 444 355 Z" fill="url(#hairStyle)" />
+
+      <!-- Over-Ear Developer Wireless Headphones -->
+      <g id="techHeadphones">
+        <!-- Headband arch over hair -->
+        <path d="M 344 370 C 344 295, 456 295, 456 370" fill="none" stroke="#06b6d4" stroke-width="6" stroke-linecap="round" filter="url(#cyanGlow)" />
+        <path d="M 344 370 C 344 295, 456 295, 456 370" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+        
+        <!-- Left Ear Cup -->
+        <rect x="337" y="365" width="13" height="34" rx="6.5" fill="#1e293b" stroke="#06b6d4" stroke-width="2" />
+        <rect x="340" y="372" width="7" height="20" rx="3.5" fill="#06b6d4" />
+
+        <!-- Right Ear Cup -->
+        <rect x="450" y="365" width="13" height="34" rx="6.5" fill="#1e293b" stroke="#06b6d4" stroke-width="2" />
+        <rect x="453" y="372" width="7" height="20" rx="3.5" fill="#06b6d4" />
+      </g>
+    </g>
+
+    <!-- ARMS & HANDS (Seamlessly extending from shoulders to keyboard) -->
+    <g id="armsAndHands">
+      <!-- Left Arm & Forearm -->
+      <path d="M 295 500 
+               C 275 550, 305 590, 355 588 
+               L 375 580" fill="none" stroke="url(#hoodieSleeves)" stroke-width="32" stroke-linecap="round" />
+      
+      <!-- Right Arm & Forearm -->
+      <path d="M 505 500 
+               C 525 550, 495 590, 445 588 
+               L 425 580" fill="none" stroke="url(#hoodieSleeves)" stroke-width="32" stroke-linecap="round" />
+
+      <!-- Left Hand on Keyboard -->
+      <ellipse cx="365" cy="580" rx="14" ry="10" fill="url(#skinTone)" />
+      
+      <!-- Right Hand on Keyboard/Trackpad -->
+      <ellipse cx="435" cy="580" rx="14" ry="10" fill="url(#skinTone)" />
+    </g>
+
+    <!-- LAPTOP (Positioned in front of arms on desk) -->
+    <g transform="translate(305, 535)">
+      <!-- Laptop Screen Back (Facing viewer) -->
+      <polygon points="30,5 160,5 180,55 10,55" fill="#475569" stroke="#64748b" stroke-width="1.5" />
+      <!-- Glowing Logo on Laptop lid -->
+      <circle cx="95" cy="28" r="8" fill="#06b6d4" filter="url(#cyanGlow)" />
+      <polygon points="92,23 98,23 95,33" fill="#ffffff" />
+
+      <!-- Laptop Base / Deck -->
+      <polygon points="5,55 185,55 200,72 -10,72" fill="#1e293b" stroke="#334155" stroke-width="1.2" />
+      <!-- Keyboard Cyan Backlight Edge -->
+      <line x1="20" y1="57" x2="170" y2="57" stroke="#06b6d4" stroke-width="2.5" filter="url(#cyanGlow)" />
+      <!-- Trackpad -->
+      <rect x="80" y="60" width="30" height="9" rx="2" fill="#0f172a" stroke="#475569" stroke-width="0.8" />
+    </g>
+  </g>
+
+  <!-- ==================== FRONT BOTTOM KPI STATS PILL ==================== -->
+  <g transform="translate(160, 715)">
+    <rect width="480" height="52" rx="26" fill="rgba(15, 23, 42, 0.94)" stroke="rgba(6, 182, 212, 0.45)" stroke-width="1.5" />
+    <g transform="translate(30, 26)">
+      <!-- Column 1: SQL Analytics -->
+      <text x="0" y="5" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="12" font-weight="800">SQL Analytics</text>
+      <text x="0" y="18" fill="#94a3b8" font-family="sans-serif" font-size="9">CTEs • Window Functions</text>
+      <line x1="115" y1="-10" x2="115" y2="18" stroke="#334155" stroke-width="1" />
+
+      <!-- Column 2: Python & ML -->
+      <text x="140" y="5" fill="#10b981" font-family="'Fira Code', monospace" font-size="12" font-weight="800">Python &amp; ML</text>
+      <text x="140" y="18" fill="#94a3b8" font-family="sans-serif" font-size="9">Pandas • XGBoost • ANN</text>
+      <line x1="275" y1="-10" x2="275" y2="18" stroke="#334155" stroke-width="1" />
+
+      <!-- Column 3: Power BI -->
+      <text x="300" y="5" fill="#a78bfa" font-family="'Fira Code', monospace" font-size="12" font-weight="800">Power BI</text>
+      <text x="300" y="18" fill="#94a3b8" font-family="sans-serif" font-size="9">DAX • Star Schema BI</text>
+    </g>
+  </g>
+</svg>

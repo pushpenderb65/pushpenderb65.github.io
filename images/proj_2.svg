@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="p2Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="trendGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.65" />
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.05" />
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#p2Bg)" rx="8" />
+
+  <!-- Jupyter Notebook Top Nav -->
+  <rect width="800" height="42" fill="#1e293b" />
+  <circle cx="20" cy="21" r="5" fill="#f87171" />
+  <circle cx="36" cy="21" r="5" fill="#fbbf24" />
+  <circle cx="52" cy="21" r="5" fill="#34d399" />
+  
+  <!-- Jupyter Logo mark and filename -->
+  <text x="75" y="26" fill="#f97316" font-family="sans-serif" font-size="14" font-weight="800">♃</text>
+  <text x="94" y="26" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="13" font-weight="700">Retail_Sales.ipynb</text>
+  <rect x="235" y="12" width="70" height="20" rx="4" fill="rgba(255,255,255,0.06)" />
+  <text x="244" y="26" fill="#94a3b8" font-family="sans-serif" font-size="11">Colab / Py3</text>
+
+  <g transform="translate(620, 12)">
+    <rect width="160" height="20" rx="4" fill="rgba(16, 185, 129, 0.15)" stroke="rgba(16, 185, 129, 0.4)" stroke-width="1" />
+    <circle cx="12" cy="10" r="4" fill="#10b981" />
+    <text x="24" y="14" fill="#34d399" font-family="monospace" font-size="10" font-weight="700">RAM: 1.8GB | Connected</text>
+  </g>
+
+  <!-- Cell 1: Python Code Execution -->
+  <g transform="translate(24, 56)">
+    <!-- Cell container -->
+    <rect width="752" height="110" rx="8" fill="#0d1117" stroke="#334155" stroke-width="1" />
+    
+    <!-- In [4]: prompt -->
+    <text x="16" y="28" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="700">In [4]:</text>
+
+    <!-- Code Lines -->
+    <g transform="translate(80, 16)" font-family="'Fira Code', monospace" font-size="12">
+      <text y="14">
+        <tspan fill="#f43f5e" font-weight="700">import</tspan><tspan fill="#e2e8f0"> pandas </tspan><tspan fill="#f43f5e" font-weight="700">as</tspan><tspan fill="#38bdf8"> pd</tspan><tspan fill="#e2e8f0">, seaborn </tspan><tspan fill="#f43f5e" font-weight="700">as</tspan><tspan fill="#38bdf8"> sns</tspan><tspan fill="#e2e8f0">, matplotlib.pyplot </tspan><tspan fill="#f43f5e" font-weight="700">as</tspan><tspan fill="#38bdf8"> plt</tspan>
+      </text>
+      <text y="36">
+        <tspan fill="#e2e8f0">df = pd.read_csv(</tspan><tspan fill="#10b981">'retail_sales_dataset.csv'</tspan><tspan fill="#e2e8f0">)</tspan>
+      </text>
+      <text y="58">
+        <tspan fill="#e2e8f0">df[</tspan><tspan fill="#10b981">'Total_Sales'</tspan><tspan fill="#e2e8f0">] = df[</tspan><tspan fill="#10b981">'Quantity'</tspan><tspan fill="#e2e8f0">] * df[</tspan><tspan fill="#10b981">'Price_per_Unit'</tspan><tspan fill="#e2e8f0">]</tspan>
+      </text>
+      <text y="80">
+        <tspan fill="#a855f7">plt.figure</tspan><tspan fill="#e2e8f0">(figsize=(</tspan><tspan fill="#fbbf24">10</tspan><tspan fill="#e2e8f0">, </tspan><tspan fill="#fbbf24">4</tspan><tspan fill="#e2e8f0">)); </tspan>
+        <tspan fill="#a855f7">sns.lineplot</tspan><tspan fill="#e2e8f0">(data=df, x=</tspan><tspan fill="#10b981">'Month'</tspan><tspan fill="#e2e8f0">, y=</tspan><tspan fill="#10b981">'Total_Sales'</tspan><tspan fill="#e2e8f0">, hue=</tspan><tspan fill="#10b981">'Product_Category'</tspan><tspan fill="#e2e8f0">)</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- Cell Output: Visual Analytics Canvas -->
+  <g transform="translate(24, 178)">
+    <rect width="752" height="302" rx="8" fill="#0b1329" stroke="#1e293b" stroke-width="1" />
+    
+    <!-- Out [4]: tag -->
+    <text x="16" y="24" fill="#f43f5e" font-family="monospace" font-size="11" font-weight="700">Out [4]:</text>
+
+    <!-- LEFT GRAPH: Monthly Trend Area Chart -->
+    <g transform="translate(70, 20)">
+      <rect width="380" height="210" rx="8" fill="#0f172a" stroke="rgba(255,255,255,0.06)" />
+      <text x="16" y="22" fill="#f8fafc" font-family="sans-serif" font-size="12" font-weight="700">Monthly Retail Revenue Trajectory ($)</text>
+
+      <!-- Axes -->
+      <line x1="45" y1="180" x2="360" y2="180" stroke="#334155" stroke-width="1" />
+      <line x1="45" y1="40" x2="45" y2="180" stroke="#334155" stroke-width="1" />
+      
+      <!-- Y-Axis labels -->
+      <text x="38" y="45" fill="#64748b" font-family="monospace" font-size="9" text-anchor="end">50K</text>
+      <text x="38" y="90" fill="#64748b" font-family="monospace" font-size="9" text-anchor="end">35K</text>
+      <text x="38" y="135" fill="#64748b" font-family="monospace" font-size="9" text-anchor="end">20K</text>
+      <text x="38" y="180" fill="#64748b" font-family="monospace" font-size="9" text-anchor="end">0</text>
+
+      <!-- Trend Area -->
+      <polygon points="45,180 45,130 85,120 125,140 165,110 205,95 245,115 285,75 325,50 360,45 360,180" fill="url(#trendGrad)" />
+      <!-- Line curve -->
+      <polyline points="45,130 85,120 125,140 165,110 205,95 245,115 285,75 325,50 360,45" fill="none" stroke="#06b6d4" stroke-width="3" />
+      
+      <!-- High point callout -->
+      <circle cx="360" cy="45" r="5" fill="#38bdf8" stroke="#fff" stroke-width="2" />
+      <rect x="280" y="24" width="75" height="18" rx="4" fill="#06b6d4" />
+      <text x="317" y="37" fill="#fff" font-family="sans-serif" font-size="10" font-weight="800" text-anchor="middle">Peak: $48.6K</text>
+
+      <!-- Month ticks -->
+      <g font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">
+        <text x="85" y="196">Q1</text>
+        <text x="165" y="196">Q2</text>
+        <text x="245" y="196">Q3</text>
+        <text x="330" y="196">Q4</text>
+      </g>
+    </g>
+
+    <!-- RIGHT PANEL: Category Breakdown Bars & EDA KPIs -->
+    <g transform="translate(465, 20)">
+      <rect width="265" height="210" rx="8" fill="#0f172a" stroke="rgba(255,255,255,0.06)" />
+      <text x="16" y="22" fill="#f8fafc" font-family="sans-serif" font-size="12" font-weight="700">Sales by Category (Seaborn)</text>
+
+      <!-- Bar 1: Electronics -->
+      <g transform="translate(16, 40)">
+        <text x="0" y="12" fill="#94a3b8" font-family="sans-serif" font-size="11">Electronics</text>
+        <text x="233" y="12" fill="#38bdf8" font-family="monospace" font-size="11" font-weight="700" text-anchor="end">$156.9K</text>
+        <rect x="0" y="18" width="233" height="8" rx="4" fill="#1e293b" />
+        <rect x="0" y="18" width="210" height="8" rx="4" fill="#06b6d4" />
+      </g>
+
+      <!-- Bar 2: Clothing -->
+      <g transform="translate(16, 80)">
+        <text x="0" y="12" fill="#94a3b8" font-family="sans-serif" font-size="11">Clothing &amp; Apparel</text>
+        <text x="233" y="12" fill="#a78bfa" font-family="monospace" font-size="11" font-weight="700" text-anchor="end">$132.4K</text>
+        <rect x="0" y="18" width="233" height="8" rx="4" fill="#1e293b" />
+        <rect x="0" y="18" width="170" height="8" rx="4" fill="#8b5cf6" />
+      </g>
+
+      <!-- Bar 3: Beauty & Health -->
+      <g transform="translate(16, 120)">
+        <text x="0" y="12" fill="#94a3b8" font-family="sans-serif" font-size="11">Beauty &amp; Personal Care</text>
+        <text x="233" y="12" fill="#ec4899" font-family="monospace" font-size="11" font-weight="700" text-anchor="end">$114.2K</text>
+        <rect x="0" y="18" width="233" height="8" rx="4" fill="#1e293b" />
+        <rect x="0" y="18" width="145" height="8" rx="4" fill="#ec4899" />
+      </g>
+
+      <!-- Bar 4: Home Decor -->
+      <g transform="translate(16, 160)">
+        <text x="0" y="12" fill="#94a3b8" font-family="sans-serif" font-size="11">Home &amp; Kitchen</text>
+        <text x="233" y="12" fill="#fbbf24" font-family="monospace" font-size="11" font-weight="700" text-anchor="end">$84.8K</text>
+        <rect x="0" y="18" width="233" height="8" rx="4" fill="#1e293b" />
+        <rect x="0" y="18" width="110" height="8" rx="4" fill="#fbbf24" />
+      </g>
+    </g>
+
+    <!-- Bottom Data Summary Bar -->
+    <g transform="translate(70, 245)">
+      <rect width="660" height="42" rx="6" fill="#161e2e" stroke="#334155" stroke-width="1" />
+      <g font-family="monospace" font-size="11" fill="#94a3b8" transform="translate(20, 26)">
+        <text x="0" y="0"><tspan fill="#34d399">Dataset:</tspan> 1,000 Rows × 9 Cols</text>
+        <text x="220" y="0"><tspan fill="#38bdf8">Missing Values:</tspan> 0 (Cleaned)</text>
+        <text x="440" y="0"><tspan fill="#a78bfa">Gross Revenue:</tspan> $488,300</text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="p1Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#161b22" />
+    </linearGradient>
+    <linearGradient id="p1TabActive" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1f2937" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="500" fill="url(#p1Bg)" rx="8" />
+
+  <!-- Window Header / Title Bar -->
+  <rect width="800" height="38" fill="#161b22" />
+  <circle cx="20" cy="19" r="6" fill="#f87171" />
+  <circle cx="38" cy="19" r="6" fill="#fbbf24" />
+  <circle cx="56" cy="19" r="6" fill="#34d399" />
+  <text x="400" y="24" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace" font-size="12" font-weight="600" text-anchor="middle">DataGrip / pgAdmin — pushpenderb65/CASE_STUDY_PROJ (retail_db)</text>
+
+  <!-- Editor Tabs -->
+  <g transform="translate(0, 38)">
+    <rect width="800" height="34" fill="#0d1117" stroke="#30363d" stroke-width="1" />
+    <!-- Active Tab: Proj.sql -->
+    <rect x="180" y="0" width="130" height="34" fill="#161b22" stroke="#30363d" stroke-width="1" />
+    <rect x="180" y="0" width="130" height="2" fill="#06b6d4" />
+    <text x="195" y="21" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="700">Proj.sql</text>
+    <text x="295" y="21" fill="#6b7280" font-family="sans-serif" font-size="12">×</text>
+
+    <!-- Inactive Tab: schema.sql -->
+    <rect x="312" y="0" width="115" height="34" fill="#0d1117" />
+    <text x="325" y="21" fill="#9ca3af" font-family="monospace" font-size="12">schema.sql</text>
+  </g>
+
+  <!-- Left Sidebar (Database Object Tree) -->
+  <g transform="translate(0, 72)">
+    <rect width="180" height="428" fill="#161b22" stroke="#30363d" stroke-width="1" />
+    <text x="14" y="24" fill="#9ca3af" font-family="sans-serif" font-size="11" font-weight="700" letter-spacing="1">DATABASES</text>
+    
+    <!-- DB Tree items -->
+    <g transform="translate(14, 45)" font-family="monospace" font-size="11">
+      <text x="0" y="0" fill="#38bdf8">▼ 🗄️ retail_db</text>
+      <text x="12" y="22" fill="#a78bfa">▼ 📁 Schemas (public)</text>
+      <text x="24" y="44" fill="#34d399">▼ 📋 Tables</text>
+      <text x="36" y="66" fill="#f8fafc" font-weight="700">📄 sales (1,500)</text>
+      <text x="46" y="86" fill="#64748b">🔑 OrderID [PK]</text>
+      <text x="46" y="104" fill="#64748b">📅 OrderDate</text>
+      <text x="46" y="122" fill="#64748b">🏷️ Category</text>
+      <text x="46" y="140" fill="#64748b">📍 Region / City</text>
+      <text x="46" y="158" fill="#64748b">💵 NetSales</text>
+      <text x="46" y="176" fill="#64748b">↩️ IsReturned</text>
+    </g>
+
+    <!-- Query Stats badge -->
+    <g transform="translate(14, 370)">
+      <rect width="152" height="40" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1" />
+      <text x="12" y="16" fill="#34d399" font-family="sans-serif" font-size="10" font-weight="700">● POSTGRES ACTIVE</text>
+      <text x="12" y="30" fill="#94a3b8" font-family="monospace" font-size="10">Duration: 14.2 ms</text>
+    </g>
+  </g>
+
+  <!-- Main SQL Editor Pane -->
+  <g transform="translate(180, 72)">
+    <rect width="620" height="200" fill="#0d1117" />
+    
+    <!-- Line numbers -->
+    <g font-family="monospace" font-size="11" fill="#475569" text-anchor="end">
+      <text x="30" y="24">1</text>
+      <text x="30" y="44">2</text>
+      <text x="30" y="64">3</text>
+      <text x="30" y="84">4</text>
+      <text x="30" y="104">5</text>
+      <text x="30" y="124">6</text>
+      <text x="30" y="144">7</text>
+      <text x="30" y="164">8</text>
+      <text x="30" y="184">9</text>
+    </g>
+
+    <!-- Code Syntax Highlighting -->
+    <g font-family="'Fira Code', Consolas, monospace" font-size="12" xml:space="preserve">
+      <text x="45" y="24" fill="#6b7280">-- Analysis 2: Regional revenue and multi-store performance</text>
+      
+      <text x="45" y="44">
+        <tspan fill="#f43f5e" font-weight="700">SELECT</tspan>
+        <tspan fill="#f1f5f9">  Region, Channel,</tspan>
+      </text>
+
+      <text x="45" y="64">
+        <tspan fill="#06b6d4" font-weight="700">  COUNT</tspan><tspan fill="#f1f5f9">(OrderID) </tspan>
+        <tspan fill="#f43f5e" font-weight="700">AS</tspan>
+        <tspan fill="#38bdf8"> Total_Orders,</tspan>
+      </text>
+
+      <text x="45" y="84">
+        <tspan fill="#06b6d4" font-weight="700">  SUM</tspan><tspan fill="#f1f5f9">(NetSales) </tspan>
+        <tspan fill="#f43f5e" font-weight="700">AS</tspan>
+        <tspan fill="#38bdf8"> Total_Revenue,</tspan>
+      </text>
+
+      <text x="45" y="104">
+        <tspan fill="#06b6d4" font-weight="700">  ROUND</tspan><tspan fill="#f1f5f9">(</tspan><tspan fill="#06b6d4">AVG</tspan><tspan fill="#f1f5f9">(DiscountAmount), </tspan><tspan fill="#fbbf24">2</tspan><tspan fill="#f1f5f9">) </tspan>
+        <tspan fill="#f43f5e" font-weight="700">AS</tspan>
+        <tspan fill="#38bdf8"> Avg_Discount</tspan>
+      </text>
+
+      <text x="45" y="124">
+        <tspan fill="#f43f5e" font-weight="700">FROM</tspan>
+        <tspan fill="#f1f5f9">    sales</tspan>
+      </text>
+
+      <text x="45" y="144">
+        <tspan fill="#f43f5e" font-weight="700">WHERE</tspan>
+        <tspan fill="#f1f5f9">   IsReturned = </tspan><tspan fill="#10b981">'No'</tspan>
+      </text>
+
+      <text x="45" y="164">
+        <tspan fill="#f43f5e" font-weight="700">GROUP BY</tspan>
+        <tspan fill="#f1f5f9"> Region, Channel</tspan>
+      </text>
+
+      <text x="45" y="184">
+        <tspan fill="#f43f5e" font-weight="700">ORDER BY</tspan>
+        <tspan fill="#f1f5f9"> Total_Revenue </tspan><tspan fill="#f43f5e" font-weight="700">DESC</tspan><tspan fill="#f1f5f9">;</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- Results Table Splitter Bar -->
+  <g transform="translate(180, 272)">
+    <rect width="620" height="28" fill="#161b22" stroke="#30363d" stroke-width="1" />
+    <text x="14" y="18" fill="#34d399" font-family="sans-serif" font-size="11" font-weight="700">✓ Results (4 rows returned in 14.2 ms)</text>
+    <text x="600" y="18" fill="#9ca3af" font-family="sans-serif" font-size="10" text-anchor="end">Export CSV / JSON</text>
+  </g>
+
+  <!-- Query Results Grid -->
+  <g transform="translate(180, 300)">
+    <rect width="620" height="200" fill="#0f172a" />
+    
+    <!-- Table Header -->
+    <rect width="620" height="28" fill="#1e293b" />
+    <g font-family="monospace" font-size="11" font-weight="700" fill="#94a3b8">
+      <text x="20" y="18">#</text>
+      <text x="60" y="18">Region</text>
+      <text x="170" y="18">Channel</text>
+      <text x="270" y="18">Total_Orders</text>
+      <text x="390" y="18">Total_Revenue</text>
+      <text x="510" y="18">Avg_Discount</text>
+    </g>
+
+    <!-- Table Rows -->
+    <!-- Row 1 -->
+    <rect y="28" width="620" height="34" fill="#0d1117" />
+    <g font-family="monospace" font-size="11" fill="#f8fafc">
+      <text x="20" y="50" fill="#64748b">1</text>
+      <text x="60" y="50" fill="#38bdf8" font-weight="700">North</text>
+      <text x="170" y="50"><tspan fill="#34d399">Online</tspan></text>
+      <text x="270" y="50">482</text>
+      <text x="390" y="50" fill="#10b981" font-weight="700">$142,850.00</text>
+      <text x="510" y="50">$18.45</text>
+    </g>
+
+    <!-- Row 2 -->
+    <rect y="62" width="620" height="34" fill="#131d2e" />
+    <g font-family="monospace" font-size="11" fill="#f8fafc">
+      <text x="20" y="84" fill="#64748b">2</text>
+      <text x="60" y="84" fill="#38bdf8" font-weight="700">South</text>
+      <text x="170" y="84"><tspan fill="#fbbf24">Offline</tspan></text>
+      <text x="270" y="84">394</text>
+      <text x="390" y="84" fill="#10b981" font-weight="700">$118,200.00</text>
+      <text x="510" y="84">$14.20</text>
+    </g>
+
+    <!-- Row 3 -->
+    <rect y="96" width="620" height="34" fill="#0d1117" />
+    <g font-family="monospace" font-size="11" fill="#f8fafc">
+      <text x="20" y="118" fill="#64748b">3</text>
+      <text x="60" y="118" fill="#38bdf8" font-weight="700">West</text>
+      <text x="170" y="118"><tspan fill="#34d399">Online</tspan></text>
+      <text x="270" y="118">345</text>
+      <text x="390" y="118" fill="#10b981" font-weight="700">$105,430.00</text>
+      <text x="510" y="118">$16.80</text>
+    </g>
+
+    <!-- Row 4 -->
+    <rect y="130" width="620" height="34" fill="#131d2e" />
+    <g font-family="monospace" font-size="11" fill="#f8fafc">
+      <text x="20" y="152" fill="#64748b">4</text>
+      <text x="60" y="152" fill="#38bdf8" font-weight="700">East</text>
+      <text x="170" y="152"><tspan fill="#fbbf24">Offline</tspan></text>
+      <text x="270" y="152">279</text>
+      <text x="390" y="152" fill="#10b981" font-weight="700">$89,120.00</text>
+      <text x="510" y="152">$12.50</text>
+    </g>
+  </g>
+</svg>

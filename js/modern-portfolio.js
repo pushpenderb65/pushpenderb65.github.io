@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function () {
     1: {
       title: 'Retail Sales Data Analysis using SQL',
       category: 'SQL & Database Analytics',
-      image: 'images/proj_1.png',
+      image: 'images/proj_1.svg',
       summary: 'In-depth SQL case study analyzing transactional retail datasets to uncover sales performance, revenue patterns, and customer purchase behaviors.',
       problem: 'Retail managers lacked clear visibility into customer lifetime value, churn probability, and peak seasonal demand periods across varied regional stores.',
       solution: 'Constructed advanced SQL analytical queries utilizing CTEs, Window functions (DENSE_RANK, LEAD/LAG, PARTITION BY), and aggregations to identify high-value cohorts and revenue leakage.',
@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function () {
     2: {
       title: 'Comprehensive Retail Sales EDA with Python',
       category: 'Python & Exploratory Data Analysis',
-      image: 'images/proj_2.png',
+      image: 'images/proj_2.svg',
       summary: 'End-to-end exploratory data analysis and data cleaning pipeline for extensive retail sales datasets using Python, Pandas, and visualization libraries.',
       problem: 'Raw transactions had missing records, inconsistent datetime formats, and outlier transactions skewing revenue forecasts.',
       solution: 'Engineered a modular cleaning pipeline with imputation, outlier detection (IQR method), feature extraction, and exploratory multivariate visualizations.',
@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function () {
     4: {
       title: 'Healthcare Diabetes Risk Prediction Model',
       category: 'Machine Learning & Predictive Modeling',
-      image: 'images/proj_4.png',
+      image: 'images/proj_4.svg',
       summary: 'Supervised predictive classification system evaluating clinical risk factors to detect pre-diabetic and diabetic indicators in patient cohorts.',
       problem: 'Early clinical intervention requires reliable probabilistic scoring of risk indicators to assist healthcare practitioners in triage.',
       solution: 'Preprocessed clinical indicators, handled zero-value physiological anomalies, applied StandardScaler normalization, and trained classification models evaluated with ROC-AUC & F1-score.',
@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function () {
     5: {
       title: 'Content-Based Movie Recommendation Engine',
       category: 'Machine Learning & NLP',
-      image: 'images/proj_5.png',
+      image: 'images/proj_5.svg',
       summary: 'Intelligent recommendation system calculating semantic and metadata similarity across extensive film libraries to suggest personalized recommendations.',
       problem: 'Users experience decision fatigue when browsing large streaming libraries without personalized similarity ranking.',
       solution: 'Extracted keywords, cast, genres, and textual synopses, vectorized text with CountVectorizer, and computed Cosine Similarity matrices across title vectors.',
