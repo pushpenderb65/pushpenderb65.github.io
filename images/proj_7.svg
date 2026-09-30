@@ -1,0 +1,273 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+
+    <!-- Glowing Accents -->
+    <linearGradient id="glowCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+
+    <linearGradient id="glowPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.5" />
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.6" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glowStrong" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="500" fill="url(#bgGrad)" />
+
+  <!-- Subtle Blueprint Tech Grid -->
+  <g stroke="rgba(255, 255, 255, 0.04)" stroke-width="1">
+    <line x1="0" y1="50" x2="800" y2="50" />
+    <line x1="0" y1="100" x2="800" y2="100" />
+    <line x1="0" y1="150" x2="800" y2="150" />
+    <line x1="0" y1="200" x2="800" y2="200" />
+    <line x1="0" y1="250" x2="800" y2="250" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="350" x2="800" y2="350" />
+    <line x1="0" y1="400" x2="800" y2="400" />
+    <line x1="0" y1="450" x2="800" y2="450" />
+    <line x1="100" y1="0" x2="100" y2="500" />
+    <line x1="200" y1="0" x2="200" y2="500" />
+    <line x1="300" y1="0" x2="300" y2="500" />
+    <line x1="400" y1="0" x2="400" y2="500" />
+    <line x1="500" y1="0" x2="500" y2="500" />
+    <line x1="600" y1="0" x2="600" y2="500" />
+    <line x1="700" y1="0" x2="700" y2="500" />
+  </g>
+
+  <!-- Radial ambient glow spots -->
+  <circle cx="280" cy="250" r="160" fill="#06b6d4" opacity="0.08" filter="url(#glowStrong)" />
+  <circle cx="620" cy="220" r="140" fill="#8b5cf6" opacity="0.07" filter="url(#glowStrong)" />
+
+  <!-- Title & Header Bar inside graphic -->
+  <g transform="translate(40, 36)">
+    <rect x="0" y="0" width="130" height="24" rx="12" fill="rgba(6, 182, 212, 0.15)" stroke="rgba(6, 182, 212, 0.4)" stroke-width="1" />
+    <circle cx="12" cy="12" r="4" fill="#06b6d4" />
+    <text x="24" y="16" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1">DEEP LEARNING</text>
+    
+    <text x="145" y="17" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="800" letter-spacing="0.5">ANN Customer Churn Architecture</text>
+  </g>
+
+  <!-- NEURAL NETWORK GRAPH -->
+  <!-- Layer Synapses (Connections) -->
+  <g stroke="url(#lineGrad)" stroke-width="1.2" opacity="0.45">
+    <!-- Input to Hidden 1 -->
+    <!-- Input nodes at x=100, y=[130, 190, 250, 310, 370] -->
+    <!-- Hidden 1 at x=220, y=[110, 165, 220, 275, 330, 385] -->
+    <line x1="100" y1="130" x2="220" y2="110" />
+    <line x1="100" y1="130" x2="220" y2="165" />
+    <line x1="100" y1="130" x2="220" y2="220" />
+    <line x1="100" y1="130" x2="220" y2="275" />
+
+    <line x1="100" y1="190" x2="220" y2="110" />
+    <line x1="100" y1="190" x2="220" y2="165" />
+    <line x1="100" y1="190" x2="220" y2="220" />
+    <line x1="100" y1="190" x2="220" y2="275" />
+    <line x1="100" y1="190" x2="220" y2="330" />
+
+    <line x1="100" y1="250" x2="220" y2="165" />
+    <line x1="100" y1="250" x2="220" y2="220" />
+    <line x1="100" y1="250" x2="220" y2="275" />
+    <line x1="100" y1="250" x2="220" y2="330" />
+    <line x1="100" y1="250" x2="220" y2="385" />
+
+    <line x1="100" y1="310" x2="220" y2="165" />
+    <line x1="100" y1="310" x2="220" y2="220" />
+    <line x1="100" y1="310" x2="220" y2="275" />
+    <line x1="100" y1="310" x2="220" y2="330" />
+    <line x1="100" y1="310" x2="220" y2="385" />
+
+    <line x1="100" y1="370" x2="220" y2="220" />
+    <line x1="100" y1="370" x2="220" y2="275" />
+    <line x1="100" y1="370" x2="220" y2="330" />
+    <line x1="100" y1="370" x2="220" y2="385" />
+
+    <!-- Hidden 1 to Hidden 2 (x=340, y=[140, 205, 270, 335, 400]) -->
+    <line x1="220" y1="110" x2="340" y2="140" stroke="#6366f1" stroke-width="1.4" opacity="0.6" />
+    <line x1="220" y1="110" x2="340" y2="205" />
+    <line x1="220" y1="165" x2="340" y2="140" />
+    <line x1="220" y1="165" x2="340" y2="205" stroke="#6366f1" stroke-width="1.4" opacity="0.6" />
+    <line x1="220" y1="165" x2="340" y2="270" />
+    <line x1="220" y1="220" x2="340" y2="205" />
+    <line x1="220" y1="220" x2="340" y2="270" stroke="#06b6d4" stroke-width="1.8" opacity="0.8" />
+    <line x1="220" y1="220" x2="340" y2="335" />
+    <line x1="220" y1="275" x2="340" y2="205" />
+    <line x1="220" y1="275" x2="340" y2="270" stroke="#6366f1" stroke-width="1.5" />
+    <line x1="220" y1="275" x2="340" y2="335" />
+    <line x1="220" y1="330" x2="340" y2="270" />
+    <line x1="220" y1="330" x2="340" y2="335" stroke="#8b5cf6" stroke-width="1.5" />
+    <line x1="220" y1="385" x2="340" y2="335" />
+
+    <!-- Hidden 2 to Output (x=450, y=[250]) -->
+    <line x1="340" y1="140" x2="450" y2="250" stroke="#8b5cf6" stroke-width="1.2" opacity="0.5" />
+    <line x1="340" y1="205" x2="450" y2="250" stroke="#06b6d4" stroke-width="2" opacity="0.85" filter="url(#glow)" />
+    <line x1="340" y1="270" x2="450" y2="250" stroke="#ec4899" stroke-width="2.5" opacity="0.9" filter="url(#glow)" />
+    <line x1="340" y1="335" x2="450" y2="250" stroke="#6366f1" stroke-width="1.8" opacity="0.75" />
+  </g>
+
+  <!-- Layer 1: Input Nodes (Cyan) -->
+  <g>
+    <!-- Node 1: Credit Score -->
+    <circle cx="100" cy="130" r="14" fill="#0b1329" stroke="#06b6d4" stroke-width="2.5" filter="url(#glow)" />
+    <circle cx="100" cy="130" r="6" fill="#38bdf8" />
+    <text x="35" y="134" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" text-anchor="end">CreditScore</text>
+
+    <!-- Node 2: Geography & Gender -->
+    <circle cx="100" cy="190" r="14" fill="#0b1329" stroke="#06b6d4" stroke-width="2.5" filter="url(#glow)" />
+    <circle cx="100" cy="190" r="6" fill="#38bdf8" />
+    <text x="35" y="194" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" text-anchor="end">Age / Geo</text>
+
+    <!-- Node 3: Tenure & Balance -->
+    <circle cx="100" cy="250" r="16" fill="#0b1329" stroke="#38bdf8" stroke-width="3" filter="url(#glowStrong)" />
+    <circle cx="100" cy="250" r="7" fill="#67e8f9" />
+    <text x="35" y="254" fill="#e2e8f0" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" text-anchor="end">Bank Balance</text>
+
+    <!-- Node 4: NumOfProducts -->
+    <circle cx="100" cy="310" r="14" fill="#0b1329" stroke="#06b6d4" stroke-width="2.5" filter="url(#glow)" />
+    <circle cx="100" cy="310" r="6" fill="#38bdf8" />
+    <text x="35" y="314" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" text-anchor="end">NumProducts</text>
+
+    <!-- Node 5: IsActiveMember -->
+    <circle cx="100" cy="370" r="14" fill="#0b1329" stroke="#06b6d4" stroke-width="2.5" filter="url(#glow)" />
+    <circle cx="100" cy="370" r="6" fill="#38bdf8" />
+    <text x="35" y="374" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" text-anchor="end">ActiveMember</text>
+  </g>
+
+  <!-- Layer 2: Hidden Dense Layer 1 (ReLU + Dropout) -->
+  <g>
+    <circle cx="220" cy="110" r="12" fill="#0f172a" stroke="#6366f1" stroke-width="2" />
+    <circle cx="220" cy="110" r="5" fill="#818cf8" />
+    
+    <circle cx="220" cy="165" r="12" fill="#0f172a" stroke="#6366f1" stroke-width="2" />
+    <circle cx="220" cy="165" r="5" fill="#818cf8" />
+
+    <circle cx="220" cy="220" r="15" fill="#0f172a" stroke="#818cf8" stroke-width="3" filter="url(#glow)" />
+    <circle cx="220" cy="220" r="7" fill="#a5b4fc" />
+
+    <circle cx="220" cy="275" r="15" fill="#0f172a" stroke="#818cf8" stroke-width="3" filter="url(#glow)" />
+    <circle cx="220" cy="275" r="7" fill="#a5b4fc" />
+
+    <circle cx="220" cy="330" r="12" fill="#0f172a" stroke="#6366f1" stroke-width="2" />
+    <circle cx="220" cy="330" r="5" fill="#818cf8" />
+
+    <circle cx="220" cy="385" r="12" fill="#0f172a" stroke="#6366f1" stroke-width="2" />
+    <circle cx="220" cy="385" r="5" fill="#818cf8" />
+  </g>
+
+  <!-- Layer 3: Hidden Dense Layer 2 (Dense 32) -->
+  <g>
+    <circle cx="340" cy="140" r="13" fill="#0f172a" stroke="#8b5cf6" stroke-width="2" />
+    <circle cx="340" cy="140" r="5" fill="#c084fc" />
+
+    <circle cx="340" cy="205" r="16" fill="#0f172a" stroke="#a855f7" stroke-width="3" filter="url(#glow)" />
+    <circle cx="340" cy="205" r="8" fill="#d8b4fe" />
+
+    <circle cx="340" cy="270" r="16" fill="#0f172a" stroke="#c084fc" stroke-width="3" filter="url(#glowStrong)" />
+    <circle cx="340" cy="270" r="8" fill="#f0abfc" />
+
+    <circle cx="340" cy="335" r="13" fill="#0f172a" stroke="#8b5cf6" stroke-width="2" />
+    <circle cx="340" cy="335" r="5" fill="#c084fc" />
+  </g>
+
+  <!-- Layer 4: Output Layer (Sigmoid Binary Classifier) -->
+  <g>
+    <circle cx="450" cy="250" r="22" fill="#0f172a" stroke="#ec4899" stroke-width="3.5" filter="url(#glowStrong)" />
+    <circle cx="450" cy="250" r="11" fill="url(#glowPurple)" />
+    <text x="450" y="295" fill="#f43f5e" font-family="-apple-system, sans-serif" font-size="11" font-weight="800" text-anchor="middle" letter-spacing="1">CHURN PROB</text>
+  </g>
+
+  <!-- Connecting pointer to metrics dashboard -->
+  <path d="M 475 250 L 520 250" stroke="#f43f5e" stroke-width="2" stroke-dasharray="4,4" opacity="0.8" />
+
+  <!-- RIGHT SIDE: MODEL EVALUATION & METRICS DASHBOARD -->
+  <g transform="translate(520, 80)">
+    <!-- Container Card -->
+    <rect x="0" y="0" width="245" height="340" rx="16" fill="url(#cardGrad)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1" />
+    
+    <!-- Header of card -->
+    <text x="18" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="13" font-weight="700">Model Evaluation Metrics</text>
+    <rect x="18" y="38" width="209" height="1" fill="rgba(255, 255, 255, 0.08)" />
+
+    <!-- Metric 1: Accuracy Gauge -->
+    <g transform="translate(18, 52)">
+      <text x="0" y="12" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11" font-weight="600">Classification Accuracy</text>
+      <text x="209" y="12" fill="#10b981" font-family="-apple-system, sans-serif" font-size="12" font-weight="800" text-anchor="end">86.4%</text>
+      <!-- Track -->
+      <rect x="0" y="20" width="209" height="6" rx="3" fill="rgba(255, 255, 255, 0.08)" />
+      <rect x="0" y="20" width="180" height="6" rx="3" fill="url(#glowCyan)" />
+    </g>
+
+    <!-- Metric 2: ROC-AUC Score -->
+    <g transform="translate(18, 98)">
+      <text x="0" y="12" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="11" font-weight="600">ROC-AUC Performance</text>
+      <text x="209" y="12" fill="#38bdf8" font-family="-apple-system, sans-serif" font-size="12" font-weight="800" text-anchor="end">0.862</text>
+      <!-- Track -->
+      <rect x="0" y="20" width="209" height="6" rx="3" fill="rgba(255, 255, 255, 0.08)" />
+      <rect x="0" y="20" width="176" height="6" rx="3" fill="url(#glowPurple)" />
+    </g>
+
+    <!-- Mini ROC Curve Chart -->
+    <g transform="translate(18, 148)">
+      <rect x="0" y="0" width="209" height="92" rx="8" fill="rgba(0, 0, 0, 0.35)" stroke="rgba(255, 255, 255, 0.05)" />
+      <!-- Axes -->
+      <line x1="20" y1="76" x2="195" y2="76" stroke="#475569" stroke-width="1" />
+      <line x1="20" y1="12" x2="20" y2="76" stroke="#475569" stroke-width="1" />
+      <!-- Baseline random diagonal -->
+      <line x1="20" y1="76" x2="195" y2="12" stroke="#475569" stroke-width="1" stroke-dasharray="3,3" />
+      <!-- ANN ROC Curve -->
+      <path d="M 20 76 Q 35 24, 85 18 T 195 12" fill="none" stroke="#06b6d4" stroke-width="2.5" filter="url(#glow)" />
+      <text x="100" y="55" fill="#38bdf8" font-family="-apple-system, sans-serif" font-size="10" font-weight="700">ANN Curve (AUC .86)</text>
+    </g>
+
+    <!-- Framework Tags / Badges -->
+    <g transform="translate(18, 258)">
+      <!-- Badge 1: TensorFlow -->
+      <rect x="0" y="0" width="98" height="24" rx="6" fill="rgba(249, 115, 22, 0.12)" stroke="rgba(249, 115, 22, 0.35)" />
+      <text x="49" y="16" fill="#fb923c" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" text-anchor="middle">TensorFlow/Keras</text>
+
+      <!-- Badge 2: Scikit-Learn -->
+      <rect x="106" y="0" width="103" height="24" rx="6" fill="rgba(14, 165, 233, 0.12)" stroke="rgba(14, 165, 233, 0.35)" />
+      <text x="157" y="16" fill="#38bdf8" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" text-anchor="middle">Scikit-Learn</text>
+
+      <!-- Badge 3: 10,000 Records -->
+      <rect x="0" y="32" width="209" height="26" rx="6" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.3)" />
+      <text x="104" y="49" fill="#34d399" font-family="-apple-system, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">10,000 Bank Customer Records</text>
+    </g>
+  </g>
+
+  <!-- Bottom Architecture Labels -->
+  <g fill="#64748b" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" letter-spacing="1">
+    <text x="100" y="435" text-anchor="middle">INPUT LAYER</text>
+    <text x="220" y="435" text-anchor="middle">DENSE (ReLU)</text>
+    <text x="340" y="435" text-anchor="middle">DROPOUT + DENSE</text>
+    <text x="450" y="435" text-anchor="middle">SIGMOID</text>
+  </g>
+</svg>

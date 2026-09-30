@@ -64,6 +64,14 @@
               </button>
             </li>
 
+            <!-- GitHub Profile Navigation Link -->
+            <li class="nav-item ml-lg-2 mt-2 mt-lg-0 d-flex align-items-center">
+              <a href="https://github.com/pushpenderb65" target="_blank" rel="noopener noreferrer" class="nav-icon-link" id="navGithubLink" aria-label="GitHub Profile (pushpenderb65)" title="Visit GitHub Profile (@pushpenderb65)">
+                <i class="fa fa-github" style="font-size: 1.15rem;"></i>
+                <span class="d-lg-none ml-2 font-weight-medium">GitHub (@pushpenderb65)</span>
+              </a>
+            </li>
+
             <li class="nav-item ml-lg-3 mt-3 mt-lg-0">
               <a href="https://drive.google.com/file/d/1oCZ6DzHpAVfpq1l1qgSHJNopuDAjnXRa/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn nav-cta-btn" id="navResumeCta">
                 <i class="fa fa-download mr-1"></i> Resume
@@ -448,10 +456,12 @@
               </div>
 
               <div class="skill-pill-wrap">
+                <span class="skill-pill">Deep Learning</span>
+                <span class="skill-pill">ANN</span>
+                <span class="skill-pill">TensorFlow</span>
                 <span class="skill-pill">Feature Scaling</span>
                 <span class="skill-pill">Cosine Similarity</span>
                 <span class="skill-pill">ROC-AUC</span>
-                <span class="skill-pill">NLP Baselines</span>
               </div>
             </div>
           </div>
@@ -474,7 +484,7 @@
           <button type="button" class="filter-btn" data-filter="sql" id="filterSql">SQL & Analytics</button>
           <button type="button" class="filter-btn" data-filter="python" id="filterPython">Python & EDA</button>
           <button type="button" class="filter-btn" data-filter="powerbi" id="filterPowerBi">Power BI Dashboards</button>
-          <button type="button" class="filter-btn" data-filter="ml" id="filterMl">Machine Learning</button>
+          <button type="button" class="filter-btn" data-filter="ml" id="filterMl">Machine Learning &amp; DL</button>
         </div>
 
         <!-- Projects Grid -->
@@ -660,6 +670,36 @@
             </div>
           </div>
 
+          <!-- Project 7: Bank Customer Churn Prediction (DL & ANN) -->
+          <div class="col-md-6 col-lg-4 mb-4 project-item-col" data-category="ml python">
+            <div class="project-card project-reveal" data-reveal-delay="1" id="projectCard7">
+              <div class="project-thumb-box">
+                <span class="project-badge-tag" style="background: rgba(139, 92, 246, 0.25); color: #c084fc; border: 1px solid rgba(139, 92, 246, 0.4);">Deep Learning</span>
+                <img src="images/proj_7.svg" alt="Bank Customer Churn Prediction using Artificial Neural Networks (ANN)">
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Bank Customer Churn (ANN)</h3>
+                <p class="project-summary">
+                  Deep Learning binary classification pipeline built with TensorFlow &amp; Keras utilizing multi-layer feedforward neural networks to predict bank customer attrition.
+                </p>
+                <div class="project-tags">
+                  <span class="tag-badge">Deep Learning</span>
+                  <span class="tag-badge">TensorFlow / Keras</span>
+                  <span class="tag-badge">ANN</span>
+                  <span class="tag-badge">Python</span>
+                </div>
+                <div class="project-actions">
+                  <a href="https://github.com/pushpenderb65/DL-ANN-Churn" target="_blank" rel="noopener noreferrer" class="btn-project-link" id="proj7GithubBtn">
+                    <i class="fa fa-github"></i> Repository
+                  </a>
+                  <button type="button" class="btn-project-preview" data-id="7" id="proj7PreviewBtn">
+                    <i class="fa fa-eye"></i> Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         <!-- GitHub Callout Banner -->
@@ -812,17 +852,22 @@
             </div>
           </div>
 
-          <!-- Card 4: LinkedIn & WhatsApp -->
+          <!-- Card 4: LinkedIn & GitHub -->
           <div class="col-md-6 col-lg-3 mb-4">
             <div class="contact-item-card" id="contactCardSocials">
               <div class="contact-icon-circle">
-                <i class="fa fa-linkedin"></i>
+                <i class="fa fa-github"></i>
               </div>
-              <h4 class="contact-card-title">Professional Network</h4>
-              <p class="contact-card-val">linkedin.com/in/push2003</p>
-              <a href="https://www.linkedin.com/in/push2003/" target="_blank" rel="noopener noreferrer" class="copy-btn-mini text-white" id="visitLinkedinCardBtn">
-                <i class="fa fa-external-link mr-1"></i> View LinkedIn
-              </a>
+              <h4 class="contact-card-title">GitHub &amp; Networks</h4>
+              <p class="contact-card-val"><a href="https://github.com/pushpenderb65" target="_blank" rel="noopener noreferrer" class="text-white font-weight-bold">github.com/pushpenderb65</a></p>
+              <div class="d-flex flex-column" style="gap: 0.4rem;">
+                <a href="https://github.com/pushpenderb65" target="_blank" rel="noopener noreferrer" class="copy-btn-mini text-white" id="visitGithubCardBtn">
+                  <i class="fa fa-github mr-1"></i> View GitHub Profile
+                </a>
+                <a href="https://www.linkedin.com/in/push2003/" target="_blank" rel="noopener noreferrer" class="copy-btn-mini text-white" id="visitLinkedinCardBtn">
+                  <i class="fa fa-linkedin mr-1"></i> View LinkedIn
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -950,7 +995,7 @@
           </div>
           <div class="modal-footer modal-footer-modern">
             <button type="button" class="btn btn-modern-secondary py-2 px-3" data-dismiss="modal" id="modalDismissBtn">Close</button>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-modern-primary py-2 px-4" id="modalProjectGithub">
+            <a href="https://github.com/pushpenderb65" target="_blank" rel="noopener noreferrer" class="btn btn-modern-primary py-2 px-4" id="modalProjectGithub">
               <i class="fa fa-github mr-1"></i> Open Repository / Artifact
             </a>
           </div>

@@ -243,6 +243,21 @@ document.addEventListener('DOMContentLoaded', function () {
       ],
       techStack: ['Power BI', 'DAX Measures', 'Business Analytics', 'Data Visuals', 'KPI Cards'],
       githubUrl: 'https://github.com/pushpenderb65/Sales-Dash-Power-BI/blob/main/Screenshot%202026-09-13%20213653.png'
+    },
+    7: {
+      title: 'Bank Customer Churn Prediction (DL & ANN)',
+      category: 'Deep Learning & Neural Networks',
+      image: 'images/proj_7.svg',
+      summary: 'Deep Learning binary classification pipeline built with TensorFlow and Keras, employing Multi-Layer Artificial Neural Networks (ANN) to predict bank customer attrition based on demographic and transactional behavior.',
+      problem: 'Retail financial institutions encounter high customer turnover and revenue erosion when valuable account holders depart without warning. Traditional rules-based heuristics fail to detect subtle multivariate churn indicators.',
+      solution: 'Constructed an end-to-end deep learning architecture in TensorFlow & Keras featuring dense hidden layers with ReLU activations, Dropout regularization to mitigate overfitting, and a calibrated Sigmoid output layer for individual customer churn probability scoring.',
+      insights: [
+        'Trained and validated on Kaggle\'s Bank Customer Churn dataset (10,000 records) encompassing credit scores, geography, age, tenure, balance, active membership, and estimated salary.',
+        'Engineered an automated preprocessing pipeline with One-Hot categorical encoding and StandardScaler normalization for optimal gradient descent convergence.',
+        'Evaluated with comprehensive training/validation loss curves, accuracy plots, confusion matrix, and ROC-AUC curve demonstrating high predictive confidence.'
+      ],
+      techStack: ['Deep Learning', 'Artificial Neural Networks (ANN)', 'TensorFlow', 'Keras', 'Python', 'Scikit-Learn', 'Pandas & NumPy', 'Matplotlib & Seaborn'],
+      githubUrl: 'https://github.com/pushpenderb65/DL-ANN-Churn'
     }
   };
 
